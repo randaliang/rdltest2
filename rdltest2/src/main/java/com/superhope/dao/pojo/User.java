@@ -4,8 +4,11 @@ package com.superhope.dao.pojo;
 import java.math.*;
 import java.util.Date;
 
+import org.beetl.sql.core.TailBean;
 import org.beetl.sql.core.annotatoin.DateTemplate;
 import org.beetl.sql.core.annotatoin.TableTemplate;
+import org.beetl.sql.core.orm.OrmCondition;
+import org.beetl.sql.core.orm.OrmQuery;
 
 import lombok.Data;
 /*
@@ -14,7 +17,12 @@ import lombok.Data;
 */
 @Data
 @TableTemplate("order by id desc ")
-public class User  {
+@OrmQuery(
+	    value={
+	        @OrmCondition(target=Role.class,attr="roleId",targetAttr="id" ,sqlId="user.selectRole",type=OrmQuery.Type.MANY)
+	    }
+	)
+public class User extends TailBean {
     private Integer id ;
     private Integer age ;
     //用户角色

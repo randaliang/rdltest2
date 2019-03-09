@@ -21,9 +21,9 @@ import com.superhope.dao.UserDao;
 public class TestService implements InitializingBean,ApplicationContextAware{
 	@Autowired
 	JdbcTemplate jd;
-	@Autowired
-	private UserRepository userDao;
 	
+	@Autowired
+	UserDao dao;
 	
 	private ApplicationContext applicationContext = null;
 	
@@ -65,8 +65,9 @@ public class TestService implements InitializingBean,ApplicationContextAware{
 	
 	@Override
 	public void afterPropertiesSet() throws Exception {
-		List list = jd.queryForList("SELECT * FROM b_table");
-		System.out.println( list.size() );
+//		List list = jd.queryForList("SELECT * FROM b_table");
+//		System.out.println( list.size() );
+		dao.all();
 	}
 
 	
