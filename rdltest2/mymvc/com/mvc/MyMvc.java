@@ -40,6 +40,9 @@ public class MyMvc {
 		AbstractAutowireCapableBeanFactory au = null;
 //		au.
 		
+		DefaultListableBeanFactory df = null;
+//		df.registerAlias(beanName, alias);
+		
 		AnnotationConfigServletWebServerApplicationContext con = null;
 		
 //		c.getBeanDefinition(beanName)

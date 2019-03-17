@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sequence-diagram version="1.2.3" icons="true" generate-combined-fragments="true">  
+  <object id="1" language="java" name="java.util.stream.Collectors" project="rdltest2" 
+    file="C:/Java/jdk1.8.0_111/jre/lib/rt.jar" binary="true" label="collectors" type="class" autoSize="true">    
+    <position height="-1" width="-1" x="72" y="0"/>    
+    <execution id="2">      
+      <position height="425" width="112" x="5" y="98"/>    
+    </execution>    
+    <execution id="4">      
+      <position height="344" width="112" x="5" y="152"/>    
+    </execution>    
+    <execution id="6">      
+      <position height="81" width="7" x="61" y="217"/>    
+    </execution>    
+    <execution id="8">      
+      <position height="145" width="7" x="61" y="324"/>    
+    </execution>    
+    <execution id="14">      
+      <position height="27" width="7" x="61" y="415"/>    
+    </execution>  
+  </object>  
+  <object id="15" language="java" name="java.util.stream.Collectors.CollectorImpl" project="daliang" 
+    file="C:/Java/jdk1.8.0_111/jre/lib/rt.jar" binary="true" label="collectorImpl" type="class" autoSize="true">    
+    <position height="-1" width="-1" x="159" y="0"/>    
+    <execution id="10">      
+      <position height="27" width="207" x="121" y="244"/>    
+    </execution>  
+  </object>  
+  <object id="16" language="java" name="java.util.HashMap" project="daliang" file="C:/Java/jdk1.8.0_111/jre/lib/rt.jar" 
+    binary="true" label="hashMap" type="class" autoSize="true">    
+    <position height="-1" width="-1" x="240" y="0"/>    
+    <execution id="12">      
+      <position height="27" width="156" x="121" y="351"/>    
+    </execution>  
+  </object>  
+  <message id="3" 
+    operation="groupingBy(java.util.function.Function&lt;? super T,? extends K&gt;):java.util.stream.Collector&lt;T,?,java.util.Map&lt;K,java.util.List&lt;T&gt;&gt;&gt;" 
+    asynchronous="false">    
+    <end type="SOURCE" refId="2"/>    
+    <end type="TARGET" refId="4"/>  
+  </message>  
+  <message id="5" operation="toList():java.util.stream.Collector&lt;T,?,java.util.List&lt;T&gt;&gt;" 
+    asynchronous="false">    
+    <end type="SOURCE" refId="4"/>    
+    <end type="TARGET" refId="6"/>  
+  </message>  
+  <message id="7" 
+    operation="groupingBy(java.util.function.Function&lt;? super T,? extends K&gt;,java.util.stream.Collector&lt;? super T,A,D&gt;):java.util.stream.Collector&lt;T,?,java.util.Map&lt;K,D&gt;&gt;" 
+    asynchronous="false">    
+    <end type="SOURCE" refId="4"/>    
+    <end type="TARGET" refId="8"/>  
+  </message>  
+  <message id="9" 
+    operation="CollectorImpl(java.util.function.Supplier&lt;A&gt;,java.util.function.BiConsumer&lt;A,T&gt;,java.util.function.BinaryOperator&lt;A&gt;,java.util.Set&lt;java.util.stream.Collector.Characteristics&gt;)" 
+    asynchronous="false">    
+    <end type="SOURCE" refId="6"/>    
+    <end type="TARGET" refId="10"/>  
+  </message>  
+  <message id="11" operation="HashMap()" asynchronous="false">    
+    <end type="SOURCE" refId="8"/>    
+    <end type="TARGET" refId="12"/>  
+  </message>  
+  <message id="13" 
+    operation="groupingBy(java.util.function.Function&lt;? super T,? extends K&gt;,java.util.function.Supplier&lt;M&gt;,java.util.stream.Collector&lt;? super T,A,D&gt;):java.util.stream.Collector&lt;T,?,M&gt;" 
+    asynchronous="false">    
+    <end type="SOURCE" refId="8"/>    
+    <end type="TARGET" refId="14"/>  
+  </message>
+</sequence-diagram>

@@ -34,7 +34,8 @@
       <position height="27" width="203" x="187" y="179"/>    
     </execution>  
   </object>  
-  <message id="3" operation="SpringApplication(java.lang.Class[]&lt;?&gt;)" asynchronous="false">    
+  <message id="3" operation="SpringApplication(org.springframework.core.io.ResourceLoader,java.lang.Class[]&lt;?&gt;)" 
+    asynchronous="false">    
     <end type="SOURCE" refId="2"/>    
     <end type="TARGET" refId="4"/>  
   </message>  

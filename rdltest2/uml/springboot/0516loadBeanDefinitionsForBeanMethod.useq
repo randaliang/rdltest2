@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sequence-diagram version="1.2.3" icons="true" generate-combined-fragments="true">  
+  <object id="1" language="java" name="org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader" 
+    project="rdltest2" 
+    file="D:/repository/org/springframework/spring-context/5.0.10.RELEASE/spring-context-5.0.10.RELEASE.jar" 
+    binary="true" label="configurationClassBeanDefinitionReader" type="class" autoSize="true">    
+    <position height="-1" width="-1" x="47" y="0"/>    
+    <execution id="2">      
+      <position height="604" width="381" x="5" y="98"/>    
+    </execution>    
+    <execution id="4">      
+      <position height="523" width="381" x="5" y="152"/>    
+    </execution>    
+    <execution id="12">      
+      <position height="27" width="7" x="195" y="314"/>    
+    </execution>  
+  </object>  
+  <object id="27" language="java" name="org.springframework.context.annotation.ConditionEvaluator" project="rdltest2" 
+    file="D:/repository/org/springframework/spring-context/5.0.10.RELEASE/spring-context-5.0.10.RELEASE.jar" 
+    binary="true" label="conditionEvaluator" type="class" autoSize="true">    
+    <position height="-1" width="-1" x="-541" y="0"/>    
+    <execution id="6">      
+      <position height="27" width="256" x="390" y="179"/>    
+    </execution>  
+  </object>  
+  <object id="28" language="java" name="org.springframework.context.annotation.AnnotationConfigUtils" project="rdltest2" 
+    file="D:/repository/org/springframework/spring-context/5.0.10.RELEASE/spring-context-5.0.10.RELEASE.jar" 
+    binary="true" label="annotationConfigUtils" type="class" autoSize="true">    
+    <position height="-1" width="-1" x="-509" y="0"/>    
+    <execution id="8">      
+      <position height="27" width="256" x="650" y="219"/>    
+    </execution>    
+    <execution id="24">      
+      <position height="27" width="256" x="650" y="577"/>    
+    </execution>  
+  </object>  
+  <object id="29" language="java" name="org.springframework.beans.factory.support.DefaultListableBeanFactory" 
+    project="org.springframework_spring-webmvc_5.0.10.RELEASE" 
+    file="D:/repository/org/springframework/spring-beans/5.0.10.RELEASE/spring-beans-5.0.10.RELEASE.jar" binary="true" 
+    label="defaultListableBeanFactory" type="class" autoSize="true">    
+    <position height="-1" width="-1" x="-339" y="0"/>    
+    <execution id="10">      
+      <position height="27" width="277" x="910" y="254"/>    
+    </execution>    
+    <execution id="26">      
+      <position height="27" width="277" x="910" y="621"/>    
+    </execution>  
+  </object>  
+  <object id="30" language="java" 
+    name="org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.ConfigurationClassBeanDefinition" 
+    project="mybatis-plus-sample-crud" 
+    file="D:/repository/org/springframework/spring-context/5.0.10.RELEASE/spring-context-5.0.10.RELEASE.jar" 
+    binary="true" label="configurationClassBeanDefinition" type="class" autoSize="true">    
+    <position height="-1" width="-1" x="-247" y="0"/>    
+    <execution id="14">      
+      <position height="27" width="318" x="1191" y="361"/>    
+    </execution>    
+    <execution id="16">      
+      <position height="27" width="318" x="1191" y="410"/>    
+    </execution>    
+    <execution id="18">      
+      <position height="27" width="318" x="1191" y="446"/>    
+    </execution>    
+    <execution id="20">      
+      <position height="27" width="318" x="1191" y="484"/>    
+    </execution>    
+    <execution id="22">      
+      <position height="27" width="318" x="1191" y="531"/>    
+    </execution>  
+  </object>  
+  <message id="3" operation="loadBeanDefinitionsForBeanMethod(org.springframework.context.annotation.BeanMethod):void" 
+    asynchronous="false">    
+    <end type="SOURCE" refId="2"/>    
+    <end type="TARGET" refId="4"/>  
+  </message>  
+  <message id="5" 
+    operation="shouldSkip(org.springframework.core.type.AnnotatedTypeMetadata,org.springframework.context.annotation.ConfigurationCondition.ConfigurationPhase):boolean" 
+    asynchronous="false">    
+    <end type="SOURCE" refId="4"/>    
+    <end type="TARGET" refId="6"/>  
+  </message>  
+  <message id="7" 
+    operation="attributesFor(org.springframework.core.type.AnnotatedTypeMetadata,java.lang.Class&lt;?&gt;):org.springframework.core.annotation.AnnotationAttributes" 
+    asynchronous="false">    
+    <end type="SOURCE" refId="4"/>    
+    <end type="TARGET" refId="8"/>  
+  </message>  
+  <message id="9" operation="registerAlias(java.lang.String,java.lang.String):void" asynchronous="false">    
+    <end type="SOURCE" refId="4"/>    
+    <end type="TARGET" refId="10"/>  
+  </message>  
+  <message id="11" 
+    operation="isOverriddenByExistingDefinition(org.springframework.context.annotation.BeanMethod,java.lang.String):boolean" 
+    asynchronous="false">    
+    <end type="SOURCE" refId="4"/>    
+    <end type="TARGET" refId="12"/>  
+  </message>  
+  <message id="13" 
+    operation="ConfigurationClassBeanDefinition(org.springframework.context.annotation.ConfigurationClass,org.springframework.core.type.MethodMetadata)" 
+    asynchronous="false">    
+    <end type="SOURCE" refId="4"/>    
+    <end type="TARGET" refId="14"/>  
+  </message>  
+  <message id="15" operation="setBeanClassName(java.lang.String):void" asynchronous="false">    
+    <end type="SOURCE" refId="4"/>    
+    <end type="TARGET" refId="16"/>  
+  </message>  
+  <message id="17" operation="setFactoryMethodName(java.lang.String):void" asynchronous="false">    
+    <end type="SOURCE" refId="4"/>    
+    <end type="TARGET" refId="18"/>  
+  </message>  
+  <message id="19" operation="setFactoryBeanName(java.lang.String):void" asynchronous="false">    
+    <end type="SOURCE" refId="4"/>    
+    <end type="TARGET" refId="20"/>  
+  </message>  
+  <message id="21" operation="setUniqueFactoryMethodName(java.lang.String):void" asynchronous="false">    
+    <end type="SOURCE" refId="4"/>    
+    <end type="TARGET" refId="22"/>  
+  </message>  
+  <message id="23" 
+    operation="processCommonDefinitionAnnotations(org.springframework.beans.factory.annotation.AnnotatedBeanDefinition,org.springframework.core.type.AnnotatedTypeMetadata):void" 
+    asynchronous="false">    
+    <end type="SOURCE" refId="4"/>    
+    <end type="TARGET" refId="24"/>  
+  </message>  
+  <message id="25" 
+    operation="registerBeanDefinition(java.lang.String,org.springframework.beans.factory.config.BeanDefinition):void" 
+    asynchronous="false">    
+    <end type="SOURCE" refId="4"/>    
+    <end type="TARGET" refId="26"/>  
+  </message>
+</sequence-diagram>

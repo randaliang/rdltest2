@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sequence-diagram version="1.2.3" icons="true" generate-combined-fragments="true">  
+  <object id="1" language="java" name="org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader" 
+    project="rdltest2" 
+    file="D:/repository/org/springframework/spring-context/5.0.10.RELEASE/spring-context-5.0.10.RELEASE.jar" 
+    binary="true" label="configurationClassBeanDefinitionReader" type="class" autoSize="true">    
+    <position height="-1" width="-1" x="240" y="0"/>    
+    <execution id="2">      
+      <position height="365" width="381" x="5" y="100"/>    
+    </execution>    
+    <execution id="4">      
+      <position height="284" width="381" x="5" y="154"/>    
+    </execution>    
+    <execution id="8">      
+      <position height="176" width="7" x="192" y="235"/>    
+    </execution>    
+    <execution id="14">      
+      <position height="27" width="7" x="198" y="357"/>    
+    </execution>  
+  </object>  
+  <object id="15" language="java" 
+    name="org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.TrackedConditionEvaluator" 
+    project="mybatis-plus-sample-crud" 
+    file="D:/repository/org/springframework/spring-context/5.0.10.RELEASE/spring-context-5.0.10.RELEASE.jar" 
+    binary="true" label="trackedConditionEvaluator" type="class" autoSize="true">    
+    <position height="-1" width="-1" x="-513" y="0"/>    
+    <execution id="6">      
+      <position height="27" width="259" x="390" y="181"/>    
+    </execution>    
+    <execution id="10">      
+      <position height="27" width="259" x="390" y="262"/>    
+    </execution>  
+  </object>  
+  <object id="16" language="java" name="org.springframework.context.annotation.ConfigurationClassParser.ImportStack" 
+    project="mybatis-plus-sample-crud" 
+    file="D:/repository/org/springframework/spring-context/5.0.10.RELEASE/spring-context-5.0.10.RELEASE.jar" 
+    binary="true" label="importStack" type="class" autoSize="true">    
+    <position height="-1" width="-1" x="-774" y="0"/>    
+    <execution id="12">      
+      <position height="27" width="256" x="653" y="297"/>    
+    </execution>  
+  </object>  
+  <object id="17" language="java" name="org.springframework.beans.factory.annotation.AnnotatedGenericBeanDefinition" 
+    project="org.springframework_spring-webmvc_5.0.10.RELEASE" 
+    file="D:/repository/org/springframework/spring-beans/5.0.10.RELEASE/spring-beans-5.0.10.RELEASE.jar" binary="true" 
+    label="annotatedGenericBeanDefinition" type="class" autoSize="true">    
+    <position height="-1" width="-1" x="-677" y="0"/>  
+  </object>  
+  <message id="3" 
+    operation="loadBeanDefinitions(java.util.Set&lt;org.springframework.context.annotation.ConfigurationClass&gt;):void" 
+    asynchronous="false">    
+    <end type="SOURCE" refId="2"/>    
+    <end type="TARGET" refId="4"/>  
+  </message>  
+  <message id="5" operation="TrackedConditionEvaluator()" asynchronous="false">    
+    <end type="SOURCE" refId="4"/>    
+    <end type="TARGET" refId="6"/>  
+  </message>  
+  <message id="7" 
+    operation="loadBeanDefinitionsForConfigurationClass(org.springframework.context.annotation.ConfigurationClass,org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.TrackedConditionEvaluator):void" 
+    asynchronous="false">    
+    <end type="SOURCE" refId="4"/>    
+    <end type="TARGET" refId="8"/>  
+  </message>  
+  <message id="9" operation="shouldSkip(org.springframework.context.annotation.ConfigurationClass):boolean" 
+    asynchronous="false">    
+    <end type="SOURCE" refId="8"/>    
+    <end type="TARGET" refId="10"/>  
+  </message>  
+  <message id="11" operation="removeImportingClass(java.lang.String):void" asynchronous="false">    
+    <end type="SOURCE" refId="8"/>    
+    <end type="TARGET" refId="12"/>  
+  </message>  
+  <message id="13" 
+    operation="registerBeanDefinitionForImportedConfigurationClass(org.springframework.context.annotation.ConfigurationClass):void" 
+    asynchronous="false">    
+    <end type="SOURCE" refId="8"/>    
+    <end type="TARGET" refId="14"/>  
+  </message>
+</sequence-diagram>

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sequence-diagram version="1.2.3" icons="true" generate-combined-fragments="true">  
+  <object id="1" language="java" name="org.springframework.boot.SpringApplication" project="mybatis-plus-sample-crud" 
+    file="D:/repository/org/springframework/boot/spring-boot/2.0.6.RELEASE/spring-boot-2.0.6.RELEASE.jar" binary="true" 
+    label="springApplication" type="class" autoSize="true">    
+    <position height="-1" width="-1" x="121" y="0"/>    
+    <execution id="2">      
+      <position height="663" width="178" x="5" y="98"/>    
+    </execution>    
+    <execution id="4">      
+      <position height="582" width="178" x="5" y="152"/>    
+    </execution>    
+    <execution id="6">      
+      <position height="454" width="7" x="91" y="253"/>    
+    </execution>    
+    <execution id="8">      
+      <position height="323" width="7" x="91" y="357"/>    
+    </execution>  
+  </object>  
+  <object id="11" language="java" name="org.springframework.boot.diagnostics.FailureAnalyzers" project="rdltest2" 
+    file="D:/repository/org/springframework/boot/spring-boot/2.0.6.RELEASE/spring-boot-2.0.6.RELEASE.jar" binary="true" 
+    label="failureAnalyzers" type="class" autoSize="true">    
+    <position height="-1" width="-1" x="300" y="0"/>    
+    <execution id="10">      
+      <position height="256" width="243" x="187" y="397"/>    
+    </execution>    
+    <execution id="13">      
+      <position height="175" width="243" x="187" y="451"/>    
+    </execution>    
+    <execution id="15">      
+      <position height="81" width="7" x="305" y="518"/>    
+    </execution>  
+  </object>  
+  <object id="18" language="java" name="com.ctrip.framework.apollo.spring.config.PropertySourcesProcessor" 
+    project="rdltest2" file="D:/repository/com/ctrip/framework/apollo/apollo-client/1.0.0/apollo-client-1.0.0.jar" 
+    binary="true" label="propertySourcesProcessor" type="class" autoSize="true">    
+    <position height="-1" width="-1" x="357" y="0"/>    
+    <execution id="17">      
+      <position height="27" width="260" x="434" y="545"/>    
+    </execution>  
+  </object>  
+  <combined-fragment id="19" interaction-operator="OPT">    
+    <interaction-operand id="20" constraint="SpringBootExceptionReporter">      
+      <fragment refId="5"/>    
+    </interaction-operand>  
+  </combined-fragment>  
+  <message id="3" operation="run(java.lang.String[]):org.springframework.context.ConfigurableApplicationContext" 
+    asynchronous="false">    
+    <end type="SOURCE" refId="2"/>    
+    <end type="TARGET" refId="4"/>  
+  </message>  
+  <message id="5" 
+    operation="getSpringFactoriesInstances(java.lang.Class&lt;T&gt;,java.lang.Class[]&lt;?&gt;,java.lang.Object[]):java.util.Collection&lt;T&gt;" 
+    asynchronous="false">    
+    <end type="SOURCE" refId="4"/>    
+    <end type="TARGET" refId="6"/>  
+  </message>  
+  <message id="7" 
+    operation="createSpringFactoriesInstances(java.lang.Class&lt;T&gt;,java.lang.Class[]&lt;?&gt;,java.lang.ClassLoader,java.lang.Object[],java.util.Set&lt;java.lang.String&gt;):java.util.List&lt;T&gt;" 
+    asynchronous="false">    
+    <end type="SOURCE" refId="6"/>    
+    <end type="TARGET" refId="8"/>  
+  </message>  
+  <message id="9" operation="FailureAnalyzers(org.springframework.context.ConfigurableApplicationContext)" 
+    asynchronous="false">    
+    <end type="SOURCE" refId="8"/>    
+    <end type="TARGET" refId="10"/>  
+  </message>  
+  <message id="12" 
+    operation="prepareFailureAnalyzers(java.util.List&lt;org.springframework.boot.diagnostics.FailureAnalyzer&gt;,org.springframework.context.ConfigurableApplicationContext):void" 
+    asynchronous="false">    
+    <end type="SOURCE" refId="10"/>    
+    <end type="TARGET" refId="13"/>  
+  </message>  
+  <message id="14" 
+    operation="prepareAnalyzer(org.springframework.context.ConfigurableApplicationContext,org.springframework.boot.diagnostics.FailureAnalyzer):void" 
+    asynchronous="false" x="195" y="479">    
+    <end type="SOURCE" refId="13"/>    
+    <end type="TARGET" refId="15"/>  
+  </message>  
+  <message id="16" operation="setEnvironment(org.springframework.core.env.Environment):void" asynchronous="false">    
+    <end type="SOURCE" refId="15"/>    
+    <end type="TARGET" refId="17"/>  
+  </message>
+</sequence-diagram>

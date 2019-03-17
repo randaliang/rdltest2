@@ -5,37 +5,37 @@
     label="springApplication" type="class" autoSize="true">    
     <position height="-1" width="-1" x="109" y="0"/>    
     <execution id="2">      
-      <position height="729" width="178" x="5" y="98"/>    
+      <position height="785" width="178" x="5" y="98"/>    
     </execution>    
     <execution id="4">      
-      <position height="648" width="178" x="5" y="152"/>    
+      <position height="704" width="178" x="5" y="152"/>    
     </execution>    
     <execution id="6">      
       <position height="27" width="7" x="91" y="207"/>    
     </execution>    
     <execution id="10">      
-      <position height="27" width="7" x="94" y="308"/>    
+      <position height="27" width="7" x="94" y="353"/>    
     </execution>    
     <execution id="12">      
-      <position height="27" width="7" x="94" y="371"/>    
+      <position height="27" width="7" x="94" y="412"/>    
     </execution>    
     <execution id="14">      
-      <position height="27" width="7" x="91" y="431"/>    
+      <position height="27" width="7" x="91" y="477"/>    
     </execution>    
     <execution id="16">      
-      <position height="27" width="7" x="94" y="494"/>    
+      <position height="27" width="7" x="94" y="539"/>    
     </execution>    
     <execution id="18">      
-      <position height="27" width="7" x="94" y="554"/>    
+      <position height="27" width="7" x="94" y="606"/>    
     </execution>    
     <execution id="20">      
-      <position height="27" width="7" x="94" y="614"/>    
+      <position height="27" width="7" x="94" y="671"/>    
     </execution>    
     <execution id="22">      
-      <position height="27" width="7" x="94" y="684"/>    
+      <position height="27" width="7" x="94" y="737"/>    
     </execution>    
     <execution id="24">      
-      <position height="27" width="7" x="91" y="746"/>    
+      <position height="27" width="7" x="91" y="802"/>    
     </execution>  
   </object>  
   <object id="25" language="java" name="org.springframework.boot.SpringApplicationRunListeners" 
@@ -44,7 +44,16 @@
     label="springApplicationRunListeners" type="class" autoSize="true">    
     <position height="-1" width="-1" x="299" y="0"/>    
     <execution id="8">      
-      <position height="27" width="295" x="187" y="243"/>    
+      <position height="81" width="295" x="187" y="243"/>    
+    </execution>  
+  </object>  
+  <object id="28" language="java" name="org.springframework.boot.context.event.EventPublishingRunListener" 
+    project="mybatis-plus-sample-crud" 
+    file="D:/repository/org/springframework/boot/spring-boot/2.0.6.RELEASE/spring-boot-2.0.6.RELEASE.jar" binary="true" 
+    label="eventPublishingRunListener" type="class" autoSize="true">    
+    <position height="-1" width="-1" x="396" y="0"/>    
+    <execution id="27">      
+      <position height="27" width="273" x="486" y="270"/>    
     </execution>  
   </object>  
   <message id="3" operation="run(java.lang.String[]):org.springframework.context.ConfigurableApplicationContext" 
@@ -104,5 +113,9 @@
     asynchronous="false">    
     <end type="SOURCE" refId="4"/>    
     <end type="TARGET" refId="24"/>  
+  </message>  
+  <message id="26" operation="starting():void" asynchronous="false">    
+    <end type="SOURCE" refId="8"/>    
+    <end type="TARGET" refId="27"/>  
   </message>
 </sequence-diagram>

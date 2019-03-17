@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sequence-diagram version="1.2.3" icons="true" generate-combined-fragments="true">  
+  <object id="1" language="java" name="org.springframework.boot.SpringApplication" project="mybatis-plus-sample-crud" 
+    file="D:/repository/org/springframework/boot/spring-boot/2.0.6.RELEASE/spring-boot-2.0.6.RELEASE.jar" binary="true" 
+    label="springApplication" type="class" autoSize="true">    
+    <position height="-1" width="-1" x="90" y="0"/>    
+    <execution id="2">      
+      <position height="406" width="178" x="5" y="98"/>    
+    </execution>    
+    <execution id="4">      
+      <position height="325" width="178" x="5" y="152"/>    
+    </execution>    
+    <execution id="6">      
+      <position height="27" width="7" x="91" y="212"/>    
+    </execution>    
+    <execution id="8">      
+      <position height="171" width="7" x="94" y="279"/>    
+    </execution>    
+    <execution id="10">      
+      <position height="27" width="7" x="94" y="333"/>    
+    </execution>    
+    <execution id="12">      
+      <position height="27" width="7" x="94" y="396"/>    
+    </execution>  
+  </object>  
+  <object id="13" language="java" name="org.springframework.boot.SpringApplicationRunListeners" 
+    project="mybatis-plus-sample-crud" 
+    file="D:/repository/org/springframework/boot/spring-boot/2.0.6.RELEASE/spring-boot-2.0.6.RELEASE.jar" binary="true" 
+    label="springApplicationRunListeners" type="class" autoSize="true">    
+    <position height="-1" width="-1" x="253" y="0"/>  
+  </object>  
+  <message id="3" 
+    operation="prepareEnvironment(org.springframework.boot.SpringApplicationRunListeners,org.springframework.boot.ApplicationArguments):org.springframework.core.env.ConfigurableEnvironment" 
+    asynchronous="false">    
+    <end type="SOURCE" refId="2"/>    
+    <end type="TARGET" refId="4"/>  
+  </message>  
+  <message id="5" operation="getOrCreateEnvironment():org.springframework.core.env.ConfigurableEnvironment" 
+    asynchronous="false">    
+    <end type="SOURCE" refId="4"/>    
+    <end type="TARGET" refId="6"/>  
+  </message>  
+  <message id="7" 
+    operation="configureEnvironment(org.springframework.core.env.ConfigurableEnvironment,java.lang.String[]):void" 
+    asynchronous="false">    
+    <end type="SOURCE" refId="4"/>    
+    <end type="TARGET" refId="8"/>  
+  </message>  
+  <message id="9" 
+    operation="configurePropertySources(org.springframework.core.env.ConfigurableEnvironment,java.lang.String[]):void" 
+    asynchronous="false">    
+    <end type="SOURCE" refId="8"/>    
+    <end type="TARGET" refId="10"/>  
+  </message>  
+  <message id="11" 
+    operation="configureProfiles(org.springframework.core.env.ConfigurableEnvironment,java.lang.String[]):void" 
+    asynchronous="false">    
+    <end type="SOURCE" refId="8"/>    
+    <end type="TARGET" refId="12"/>  
+  </message>
+</sequence-diagram>

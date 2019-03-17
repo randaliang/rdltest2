@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sequence-diagram version="1.2.3" icons="true" generate-combined-fragments="true">  
+  <object id="1" language="java" name="org.springframework.context.annotation.ConfigurationClassParser" 
+    project="rdltest2" 
+    file="D:/repository/org/springframework/spring-context/5.0.10.RELEASE/spring-context-5.0.10.RELEASE.jar" 
+    binary="true" label="configurationClassParser" type="class" autoSize="true">    
+    <position height="-1" width="-1" x="35" y="0"/>    
+    <execution id="2">      
+      <position height="162" width="256" x="5" y="98"/>    
+    </execution>    
+    <execution id="4">      
+      <position height="81" width="256" x="5" y="152"/>    
+    </execution>  
+  </object>  
+  <object id="7" language="java" name="org.springframework.core.type.classreading.AnnotationMetadataReadingVisitor" 
+    project="rdltest2" 
+    file="D:/repository/org/springframework/spring-core/5.0.10.RELEASE/spring-core-5.0.10.RELEASE.jar" binary="true" 
+    label="annotationMetadataReadingVisitor" type="class" autoSize="true">    
+    <position height="-1" width="-1" x="-182" y="0"/>    
+    <execution id="6">      
+      <position height="27" width="326" x="265" y="179"/>    
+    </execution>  
+  </object>  
+  <message id="3" 
+    operation="retrieveBeanMethodMetadata(org.springframework.context.annotation.ConfigurationClassParser.SourceClass):java.util.Set&lt;org.springframework.core.type.MethodMetadata&gt;" 
+    asynchronous="false">    
+    <end type="SOURCE" refId="2"/>    
+    <end type="TARGET" refId="4"/>  
+  </message>  
+  <message id="5" 
+    operation="getAnnotatedMethods(java.lang.String):java.util.Set&lt;org.springframework.core.type.MethodMetadata&gt;" 
+    asynchronous="false">    
+    <end type="SOURCE" refId="4"/>    
+    <end type="TARGET" refId="6"/>  
+  </message>
+</sequence-diagram>

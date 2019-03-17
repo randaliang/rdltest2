@@ -51,15 +51,36 @@ public class GzFileFilter {
 	}
 	
 	public static void main( String args[] ) {
-		 File f  = new File("D:\\temp\\广州银行\\比对\\广州银行增量包-2019年6月26日");
-//		 File[] files = f.listFiles((x,y)->{ return true ;});
-		 Set<String> set = getClassFileNames(f);
-		 File old = new File("D:\\temp\\广州银行\\比对\\旧的");
-		 removeFiles(old,set);
-		 File newfile  = new File("D:\\temp\\广州银行\\比对\\新的");
-		 removeFiles(newfile,set);
+//		 File f  = new File("D:\\temp\\广州银行\\比对\\广州银行增量包-2019年6月26日");
+////		 File[] files = f.listFiles((x,y)->{ return true ;});
+//		 Set<String> set = getClassFileNames(f);
+//		 File old = new File("D:\\temp\\广州银行\\比对\\旧的");
+//		 removeFiles(old,set);
+//		 File newfile  = new File("D:\\temp\\广州银行\\比对\\新的");
+//		 removeFiles(newfile,set);
+		
+		File f  = new File("D:\\temp\\广州银行\\比对\\广州银行增量包-2019年6月26日");
+		FindFileOperator ffo = new FindFileOperator();
+		operateFile( f, ffo );
+		Set set = ffo.getResult();
+		set.toString();
 	}
 
-
+	
+	public static void operateFile( File dir, FileExcutor fe){
+		Set<String> set = new HashSet<String>();
+		if( dir.isDirectory() ) {
+			File[] files = dir.listFiles();
+			for( File f :files ) {
+				if( f.isDirectory() ) {
+					operateFile(f,fe);
+				}else {
+					fe.accept(f);
+					
+				}
+				
+			}
+		}
+	}
 	
 }
