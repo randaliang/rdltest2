@@ -4,10 +4,10 @@
     binary="true" label="arrayList" type="class" autoSize="true">    
     <position height="-1" width="-1" x="36" y="0"/>    
     <execution id="2">      
-      <position height="569" width="137" x="5" y="98"/>    
+      <position height="500" width="137" x="5" y="98"/>    
     </execution>    
     <execution id="4">      
-      <position height="488" width="137" x="5" y="152"/>    
+      <position height="419" width="137" x="5" y="152"/>    
     </execution>    
     <execution id="6">      
       <position height="27" width="7" x="70" y="206"/>    
@@ -24,48 +24,37 @@
     file="C:/Java/jdk1.8.0_111/jre/lib/rt.jar" binary="true" label="head" type="class" autoSize="true">    
     <position height="-1" width="-1" x="-130" y="0"/>    
     <execution id="10">      
-      <position height="333" width="195" x="5" y="280"/>    
+      <position height="264" width="195" x="5" y="280"/>    
     </execution>    
     <execution id="16">      
-      <position height="27" width="7" x="99" y="381"/>    
+      <position height="141" width="7" x="99" y="376"/>    
+    </execution>    
+    <execution id="18">      
+      <position height="27" width="7" x="399" y="430"/>    
     </execution>  
   </object>  
-  <object id="23" language="java" name="java.util.stream.ReduceOps.ReduceOp" project="daliang" 
+  <object id="21" language="java" name="java.util.stream.ReduceOps.ReduceOp" project="daliang" 
     file="C:/Java/jdk1.8.0_111/jre/lib/rt.jar" binary="true" label="reduceOp" type="class" autoSize="true">    
     <position height="-1" width="-1" x="517" y="0"/>    
     <execution id="20">      
-      <position height="27" width="180" x="204" y="516"/>    
-    </execution>    
-    <execution id="22">      
-      <position height="27" width="180" x="204" y="559"/>    
+      <position height="27" width="180" x="504" y="463"/>    
     </execution>  
   </object>  
-  <object id="24" language="java" name="java.util.stream.ReduceOps" project="rdltest2" 
+  <object id="22" language="java" name="java.util.stream.ReduceOps" project="rdltest2" 
     file="C:/Java/jdk1.8.0_111/jre/lib/rt.jar" binary="true" label="reduceOps" type="class" autoSize="true">    
     <position height="-1" width="-1" x="513" y="0"/>    
     <execution id="14">      
       <position height="27" width="125" x="412" y="307"/>    
     </execution>  
   </object>  
-  <object id="25" language="java" name="java.util.stream.Collectors.CollectorImpl" project="daliang" 
+  <object id="23" language="java" name="java.util.stream.Collectors.CollectorImpl" project="daliang" 
     file="C:/Java/jdk1.8.0_111/jre/lib/rt.jar" binary="true" label="collectorImpl" type="class" autoSize="true">    
-    <position height="-1" width="-1" x="47" y="0"/>    
-    <execution id="18">      
-      <position height="81" width="207" x="541" y="417"/>    
-    </execution>  
+    <position height="-1" width="-1" x="47" y="0"/>  
   </object>  
-  <object id="28" language="java" name="java.util.EnumSet" project="daliang" file="C:/Java/jdk1.8.0_111/jre/lib/rt.jar" 
+  <object id="24" language="java" name="java.util.EnumSet" project="daliang" file="C:/Java/jdk1.8.0_111/jre/lib/rt.jar" 
     binary="true" label="enumSet" type="class" autoSize="true">    
-    <position height="-1" width="-1" x="778" y="0"/>    
-    <execution id="27">      
-      <position height="27" width="135" x="752" y="493"/>    
-    </execution>  
+    <position height="-1" width="-1" x="778" y="0"/>  
   </object>  
-  <combined-fragment id="29" interaction-operator="OPT">    
-    <interaction-operand id="30" constraint="finish">      
-      <fragment refId="26"/>    
-    </interaction-operand>  
-  </combined-fragment>  
   <message id="3" operation="stream():java.util.stream.Stream&lt;E&gt;" asynchronous="false">    
     <end type="SOURCE" refId="2"/>    
     <end type="TARGET" refId="4"/>  
@@ -93,25 +82,14 @@
     <end type="SOURCE" refId="10"/>    
     <end type="TARGET" refId="16"/>  
   </message>  
-  <message id="17" operation="characteristics():java.util.Set&lt;java.util.stream.Collector.Characteristics&gt;" 
-    asynchronous="false">    
-    <end type="SOURCE" refId="10"/>    
+  <message id="17" operation="sourceSpliterator(int):java.util.Spliterator&lt;?&gt;" asynchronous="false">    
+    <end type="SOURCE" refId="16"/>    
     <end type="TARGET" refId="18"/>  
   </message>  
   <message id="19" 
-    operation="evaluateParallel(java.util.stream.PipelineHelper&lt;T&gt;,java.util.Spliterator&lt;P_IN&gt;):R" 
-    asynchronous="false">    
-    <end type="SOURCE" refId="10"/>    
-    <end type="TARGET" refId="20"/>  
-  </message>  
-  <message id="21" 
     operation="evaluateSequential(java.util.stream.PipelineHelper&lt;T&gt;,java.util.Spliterator&lt;P_IN&gt;):R" 
     asynchronous="false">    
-    <end type="SOURCE" refId="10"/>    
-    <end type="TARGET" refId="22"/>  
-  </message>  
-  <message id="26" operation="contains(java.lang.Object):boolean" asynchronous="false">    
-    <end type="SOURCE" refId="18"/>    
-    <end type="TARGET" refId="27"/>  
+    <end type="SOURCE" refId="16"/>    
+    <end type="TARGET" refId="20"/>  
   </message>
 </sequence-diagram>
