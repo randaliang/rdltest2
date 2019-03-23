@@ -1,7 +1,7 @@
 package com.superhope;
 
-import static org.junit.Assert.*;
 
+import java.util.Arrays;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
@@ -10,7 +10,6 @@ import java.util.Map;
 import org.beetl.sql.core.ClasspathLoader;
 import org.beetl.sql.core.ConnectionSource;
 import org.beetl.sql.core.ConnectionSourceHelper;
-import org.beetl.sql.core.DefaultNameConversion;
 import org.beetl.sql.core.Interceptor;
 import org.beetl.sql.core.SQLLoader;
 import org.beetl.sql.core.SQLManager;
@@ -31,10 +30,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
-import com.Application;
-import com.priv.gabriel.repository.UserRepository;
 import com.superhope.dao.UserDao;
 import com.superhope.dao.pojo.User;
+import com.superhope.dao.pojo.UserExtend;
 
 import lombok.extern.slf4j.Slf4j;
 @Slf4j
@@ -42,26 +40,27 @@ import lombok.extern.slf4j.Slf4j;
 @SpringBootTest(classes = { Application.class })
 public class Demos {
 
-	private static SQLManager sqlManager;
+	@Autowired
+	private SQLManager sqlManager;
 	
 	@Autowired
-	private UserRepository userDao;
+	private UserDao userDao;
 	
 	@BeforeClass
 	public static void setUpBeforeClass() throws Exception {
-		log.info("setUpBeforeClass");
-		
-		String driver = "com.mysql.cj.jdbc.Driver";
-		String url = "jdbc:mysql://192.168.65.166:3306/rdl_test0?useUnicode=true&characterEncoding=utf8&useSSL=false";
-		String userName = "root";
-		String password = "123456";
-				
-		ConnectionSource source = ConnectionSourceHelper.getSimple(driver, url, userName, password);
-		
-		DBStyle mysql = new MySqlStyle();
-		SQLLoader loader = new ClasspathLoader("/sql");
-//		sqlManager = new SQLManager(mysql,loader,source,new DefaultNameConversion(), new Interceptor[]{new DebugInterceptor()});
-		sqlManager = new SQLManager(mysql,loader,source,new UnderlinedNameConversion(), new Interceptor[]{new DebugInterceptor()});
+//		log.info("setUpBeforeClass");
+//		
+//		String driver = "com.mysql.cj.jdbc.Driver";
+//		String url = "jdbc:mysql://192.168.65.166:3306/rdl_test0?useUnicode=true&characterEncoding=utf8&useSSL=false";
+//		String userName = "root";
+//		String password = "123456";
+//				
+//		ConnectionSource source = ConnectionSourceHelper.getSimple(driver, url, userName, password);
+//		
+//		DBStyle mysql = new MySqlStyle();
+//		SQLLoader loader = new ClasspathLoader("/sql");
+////		sqlManager = new SQLManager(mysql,loader,source,new DefaultNameConversion(), new Interceptor[]{new DebugInterceptor()});
+//		sqlManager = new SQLManager(mysql,loader,source,new UnderlinedNameConversion(), new Interceptor[]{new DebugInterceptor()});
 	}
 	
 	@Test
@@ -70,6 +69,7 @@ public class Demos {
 		user.setAge(19);
 		user.setName("xiandafu");
 		sqlManager.insert(user);
+		
 	}
 	
 	@Test
@@ -78,6 +78,16 @@ public class Demos {
 		User user = sqlManager.unique(User.class,id);
 		log.info("testquery------" + user.toString());
 	}
+	
+	
+	
+	@Test
+	public void tesExetendtQuery(){
+		int id = 1;
+		UserExtend user = sqlManager.unique(UserExtend.class,id);
+		log.info("testquery------" + user.toString());
+	}
+	
 	
 	@Test
 	public void updateTemplateById(){
@@ -179,6 +189,20 @@ public class Demos {
 		log.info( "templateQueryTest" + p2);
 	}
 	
+	@Test
+	public void queryNewUserest(){
+		Map<String, String> map = new HashMap<String, String>();
+		map.put("name","xiandafu%");
+		PageQuery<User> pq = new PageQuery<User>();
+		pq.setPageNumber(2);
+		pq.setPageSize(3);
+//		pq.setOrderBy("id");
+		pq.setPara("name", "xiandafu%");
+		
+		PageQuery<User> p2 = sqlManager.pageQuery("user.queryNewUser", User.class,pq);
+		log.info( "templateQueryTest" + p2);
+	}
+	
 	
 	
 	@Test
@@ -194,7 +218,8 @@ public class Demos {
 		PageQuery<User> p2 = sqlManager.pageQuery("user.query1SqlNewUser", User.class,pq);
 		log.info( "templateQueryTest" + p2);
 	}
-
+	
+	@Test
 	public void sqlId2SimplePageTest(){
 		Map<String, String> map = new HashMap<String, String>();
 		map.put("name","xiandafu%");
@@ -203,7 +228,7 @@ public class Demos {
 		pq.setPageSize(3);
 //		pq.setOrderBy("id");
 		pq.setPara("name", "xiandafu%");
-		pq.setOrderBy("id");
+//		pq.setOrderBy("id");
 		PageQuery<User> p2 = sqlManager.pageQuery("user.query2SqlNewUser", User.class,pq);
 		log.info( "templateQueryTest" + p2);
 	}
@@ -228,14 +253,52 @@ public class Demos {
 	@Test
 	public void testUserDao(){
 		
-//		PageQuery<User> pq = new PageQuery<User>();
-//		pq.setPageNumber(2);
-//		pq.setPageSize(3);
-////		pq.setOrderBy("id");
-//		pq.setPara("name", "xiandafu%");
-//		PageQuery<User> pq1  = userRepository.queryNewUser(pq);
-//		pq1.toString();
+		PageQuery<User> pq = new PageQuery<User>();
+		pq.setPageNumber(2);
+		pq.setPageSize(3);
+//		pq.setOrderBy("id");
+		pq.setPara("name", "xiandafu%");
+		PageQuery<User> pq1  = userDao.queryNewUser(pq);
+		pq1.toString();
 	}
+	
+	@Test
+	public void queryHTest(){
+		log.info("queryHTest-------" );
+	}
+	
+	
+	@Test
+	public void queryH2Test() {
+		Query<User> query = userDao.createQuery();
+		PageQuery pq = query.or(query.condition().andLike("name", "%t%")).andIn("id", Arrays.asList(1637, 1639, 1640))
+				.or(query.condition().andEq("id", 1640)).page(1, 1);
+		log.info("queryHTest-------" + pq.getList().size());
+	}
+	
+	
+	@Test
+	public void queryOrmTest() {
+		Object o = userDao.single(1).get("roleid");
+//		log.info(o.toString());
+	}
+	
+	
+	@Test
+	public void querybynamepercent() {
+		Map map = new HashMap();
+		map.put("name", "xiandafu");
+		Object o = userDao.querybynamepercent( "xiandafu");
+		log.info(o.toString());
+	}
+	
+	
+	@Test
+	public void queryIdIn() {
+		Object o = userDao.queryIdIn(new Integer[]{1,2,3});
+		log.info(o.toString());
+	}
+	
 	
 	public void insertT(){
 //		sqlManager.insert(paras)

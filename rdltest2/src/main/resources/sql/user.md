@@ -41,6 +41,10 @@ querybyname
 ===
 select #use("cols")# from user where name like #name#
 
+querybynamepercent
+===
+select * from user where name like #'%'+name+'%'#
+
 
 queryNewUser
 ===
@@ -59,11 +63,18 @@ select
 	id,name
 @}
  from user where name like #name# 
- 
+ --冉
  
 query2SqlNewUser
 ===
-select page("*") from user where name like #name# 
+select #page("*")# from user where name like #name# 
   @pageIgnoreTag(){
    order by id 
   @}
+  
+  
+queryIdIn
+===
+  select * from user where id in ( #join(ids)#)
+  
+  
