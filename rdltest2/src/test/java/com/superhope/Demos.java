@@ -30,6 +30,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import com.superhope.dao.UserDao;
+import com.superhope.dao.pojo.Role;
 import com.superhope.dao.pojo.User;
 import com.superhope.dao.pojo.UserExtend;
 
@@ -68,7 +69,6 @@ public class Demos {
 		user.setAge(19);
 		user.setName("xiandafu");
 		sqlManager.insert(user);
-		
 	}
 	
 	@Test
@@ -274,6 +274,7 @@ public class Demos {
 		PageQuery pq = query.or(query.condition().andLike("name", "%t%")).andIn("id", Arrays.asList(1637, 1639, 1640))
 				.or(query.condition().andEq("id", 1640)).page(1, 1);
 		log.info("queryHTest-------" + pq.getList().size());
+		
 	}
 	
 	
@@ -303,6 +304,11 @@ public class Demos {
 	public void insertT(){
 //		sqlManager.insert(paras)
 //		log.info( "templateQueryTest" + p2);
+	}
+	@Test
+	public void queryRole(){
+		List<Role> l = this.userDao.queryAllRole();
+		l.toString();
 	}
 
 	

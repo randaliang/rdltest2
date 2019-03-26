@@ -27,6 +27,6 @@ public class Application  implements CommandLineRunner{
 
 	@Override
 	public void run(String... args) throws Exception {
-		cs.parseCsvFile( new File("D:\\temp\\江苏\\凭证库柜面320000\\PB_PAY_VOUCHER.csv"),"PB_PAY_VOUCHER" );
+//		cs.parseCsvFile( new File("D:\\temp\\江苏\\凭证库柜面320000\\PB_PAY_VOUCHER.csv"),"PB_PAY_VOUCHER" );
 	}
 }

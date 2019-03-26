@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sequence-diagram version="1.2.3" icons="true" generate-combined-fragments="true">  
+  <object id="1" language="java" name="org.springframework.core.type.classreading.SimpleMetadataReader" 
+    project="rdltest2" 
+    file="D:/repository/org/springframework/spring-core/5.0.10.RELEASE/spring-core-5.0.10.RELEASE.jar" binary="true" 
+    label="simpleMetadataReader" type="class" autoSize="true">    
+    <position height="-1" width="-1" x="148" y="0"/>    
+    <execution id="2">      
+      <position height="301" width="283" x="5" y="99"/>    
+    </execution>    
+    <execution id="4">      
+      <position height="220" width="283" x="5" y="153"/>    
+    </execution>  
+  </object>  
+  <object id="11" language="java" name="org.springframework.asm.ClassReader" project="rdltest2" 
+    file="D:/repository/org/springframework/spring-core/5.0.10.RELEASE/spring-core-5.0.10.RELEASE.jar" binary="true" 
+    label="classReader" type="class" autoSize="true">    
+    <position height="-1" width="-1" x="417" y="0"/>    
+    <execution id="6">      
+      <position height="27" width="166" x="292" y="180"/>    
+    </execution>    
+    <execution id="10">      
+      <position height="108" width="166" x="292" y="238"/>    
+    </execution>    
+    <execution id="13">      
+      <position height="27" width="166" x="292" y="292"/>    
+    </execution>  
+  </object>  
+  <object id="14" language="java" name="org.springframework.core.type.classreading.AnnotationMetadataReadingVisitor" 
+    project="rdltest2" 
+    file="D:/repository/org/springframework/spring-core/5.0.10.RELEASE/spring-core-5.0.10.RELEASE.jar" binary="true" 
+    label="annotationMetadataReadingVisitor" type="class" autoSize="true">    
+    <position height="-1" width="-1" x="454" y="0"/>    
+    <execution id="8">      
+      <position height="27" width="326" x="462" y="211"/>    
+    </execution>  
+  </object>  
+  <message id="3" operation="SimpleMetadataReader(org.springframework.core.io.Resource,java.lang.ClassLoader)" 
+    asynchronous="false">    
+    <end type="SOURCE" refId="2"/>    
+    <end type="TARGET" refId="4"/>  
+  </message>  
+  <message id="5" operation="ClassReader(java.io.InputStream)" asynchronous="false">    
+    <end type="SOURCE" refId="4"/>    
+    <end type="TARGET" refId="6"/>  
+  </message>  
+  <message id="7" operation="AnnotationMetadataReadingVisitor(java.lang.ClassLoader)" asynchronous="false">    
+    <end type="SOURCE" refId="4"/>    
+    <end type="TARGET" refId="8"/>  
+  </message>  
+  <message id="9" operation="accept(org.springframework.asm.ClassVisitor,int):void" asynchronous="false">    
+    <end type="SOURCE" refId="4"/>    
+    <end type="TARGET" refId="10"/>  
+  </message>  
+  <message id="12" operation="accept(org.springframework.asm.ClassVisitor,org.springframework.asm.Attribute[],int):void" 
+    asynchronous="false">    
+    <end type="SOURCE" refId="10"/>    
+    <end type="TARGET" refId="13"/>  
+  </message>
+</sequence-diagram>

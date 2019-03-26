@@ -7,6 +7,7 @@ import org.beetl.sql.core.annotatoin.SqlResource;
 import org.beetl.sql.core.engine.PageQuery;
 import org.beetl.sql.core.mapper.BaseMapper;
 
+import com.superhope.dao.pojo.Role;
 import com.superhope.dao.pojo.User;
 @SqlResource("user")
 public interface UserDao extends BaseMapper<User>  {
@@ -16,4 +17,5 @@ public interface UserDao extends BaseMapper<User>  {
 	
 	List<User> queryIdIn( @Param(value = "ids") Integer[] ids);
 	
+	List<Role> queryAllRole();
 }

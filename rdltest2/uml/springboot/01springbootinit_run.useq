@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sequence-diagram version="1.2.3" icons="true" generate-combined-fragments="true">  
+  <object id="1" language="java" name="org.springframework.boot.SpringApplication" project="mybatis-plus-sample-crud" 
+    file="D:/repository/org/springframework/boot/spring-boot/2.0.6.RELEASE/spring-boot-2.0.6.RELEASE.jar" binary="true" 
+    label="springApplication" type="class" autoSize="true">    
+    <position height="-1" width="-1" x="109" y="0"/>    
+    <execution id="2">      
+      <position height="729" width="178" x="5" y="98"/>    
+    </execution>    
+    <execution id="4">      
+      <position height="648" width="178" x="5" y="152"/>    
+    </execution>    
+    <execution id="6">      
+      <position height="27" width="7" x="91" y="207"/>    
+    </execution>    
+    <execution id="10">      
+      <position height="27" width="7" x="94" y="308"/>    
+    </execution>    
+    <execution id="12">      
+      <position height="27" width="7" x="94" y="371"/>    
+    </execution>    
+    <execution id="14">      
+      <position height="27" width="7" x="91" y="431"/>    
+    </execution>    
+    <execution id="16">      
+      <position height="27" width="7" x="94" y="494"/>    
+    </execution>    
+    <execution id="18">      
+      <position height="27" width="7" x="94" y="554"/>    
+    </execution>    
+    <execution id="20">      
+      <position height="27" width="7" x="94" y="614"/>    
+    </execution>    
+    <execution id="22">      
+      <position height="27" width="7" x="94" y="684"/>    
+    </execution>    
+    <execution id="24">      
+      <position height="27" width="7" x="91" y="746"/>    
+    </execution>  
+  </object>  
+  <object id="25" language="java" name="org.springframework.boot.SpringApplicationRunListeners" 
+    project="mybatis-plus-sample-crud" 
+    file="D:/repository/org/springframework/boot/spring-boot/2.0.6.RELEASE/spring-boot-2.0.6.RELEASE.jar" binary="true" 
+    label="springApplicationRunListeners" type="class" autoSize="true">    
+    <position height="-1" width="-1" x="299" y="0"/>    
+    <execution id="8">      
+      <position height="27" width="295" x="187" y="243"/>    
+    </execution>  
+  </object>  
+  <message id="3" operation="run(java.lang.String[]):org.springframework.context.ConfigurableApplicationContext" 
+    asynchronous="false">    
+    <end type="SOURCE" refId="2"/>    
+    <end type="TARGET" refId="4"/>  
+  </message>  
+  <message id="5" operation="getRunListeners(java.lang.String[]):org.springframework.boot.SpringApplicationRunListeners" 
+    asynchronous="false">    
+    <end type="SOURCE" refId="4"/>    
+    <end type="TARGET" refId="6"/>  
+  </message>  
+  <message id="7" operation="starting():void" asynchronous="false">    
+    <end type="SOURCE" refId="4"/>    
+    <end type="TARGET" refId="8"/>  
+  </message>  
+  <message id="9" 
+    operation="prepareEnvironment(org.springframework.boot.SpringApplicationRunListeners,org.springframework.boot.ApplicationArguments):org.springframework.core.env.ConfigurableEnvironment" 
+    asynchronous="false">    
+    <end type="SOURCE" refId="4"/>    
+    <end type="TARGET" refId="10"/>  
+  </message>  
+  <message id="11" operation="configureIgnoreBeanInfo(org.springframework.core.env.ConfigurableEnvironment):void" 
+    asynchronous="false">    
+    <end type="SOURCE" refId="4"/>    
+    <end type="TARGET" refId="12"/>  
+  </message>  
+  <message id="13" operation="createApplicationContext():org.springframework.context.ConfigurableApplicationContext" 
+    asynchronous="false">    
+    <end type="SOURCE" refId="4"/>    
+    <end type="TARGET" refId="14"/>  
+  </message>  
+  <message id="15" operation="getSpringFactoriesInstances(java.lang.Class&lt;T&gt;):java.util.Collection&lt;T&gt;" 
+    asynchronous="false">    
+    <end type="SOURCE" refId="4"/>    
+    <end type="TARGET" refId="16"/>  
+  </message>  
+  <message id="17" 
+    operation="prepareContext(org.springframework.context.ConfigurableApplicationContext,org.springframework.core.env.ConfigurableEnvironment,org.springframework.boot.SpringApplicationRunListeners,org.springframework.boot.ApplicationArguments,org.springframework.boot.Banner):void" 
+    asynchronous="false">    
+    <end type="SOURCE" refId="4"/>    
+    <end type="TARGET" refId="18"/>  
+  </message>  
+  <message id="19" operation="refreshContext(org.springframework.context.ConfigurableApplicationContext):void" 
+    asynchronous="false">    
+    <end type="SOURCE" refId="4"/>    
+    <end type="TARGET" refId="20"/>  
+  </message>  
+  <message id="21" 
+    operation="afterRefresh(org.springframework.context.ConfigurableApplicationContext,org.springframework.boot.ApplicationArguments):void" 
+    asynchronous="false">    
+    <end type="SOURCE" refId="4"/>    
+    <end type="TARGET" refId="22"/>  
+  </message>  
+  <message id="23" 
+    operation="callRunners(org.springframework.context.ApplicationContext,org.springframework.boot.ApplicationArguments):void" 
+    asynchronous="false">    
+    <end type="SOURCE" refId="4"/>    
+    <end type="TARGET" refId="24"/>  
+  </message>
+</sequence-diagram>

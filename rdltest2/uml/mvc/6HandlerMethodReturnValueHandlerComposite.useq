@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sequence-diagram version="1.2.3" icons="true" generate-combined-fragments="true">  
+  <object id="1" language="java" name="org.springframework.web.method.support.HandlerMethodReturnValueHandlerComposite" 
+    project="rdltest2" file="D:/repository/org/springframework/spring-web/5.0.10.RELEASE/spring-web-5.0.10.RELEASE.jar" 
+    binary="true" label="handlerMethodReturnValueHandlerComposite" type="class" autoSize="true">    
+    <position height="-1" width="-1" x="469" y="0"/>    
+    <execution id="2">      
+      <position height="360" width="427" x="5" y="98"/>    
+    </execution>    
+    <execution id="4">      
+      <position height="279" width="427" x="5" y="152"/>    
+    </execution>    
+    <execution id="6">      
+      <position height="27" width="7" x="215" y="206"/>    
+    </execution>  
+  </object>  
+  <object id="9" language="java" 
+    name="org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor" 
+    project="org.springframework_spring-webmvc_5.0.10.RELEASE" 
+    file="D:/repository/org/springframework/spring-webmvc/5.0.10.RELEASE/spring-webmvc-5.0.10.RELEASE.jar" binary="true" 
+    label="requestResponseBodyMethodProcessor" type="class" autoSize="true">    
+    <position height="-1" width="-1" x="-388" y="0"/>    
+    <execution id="8">      
+      <position height="162" width="384" x="436" y="242"/>    
+    </execution>    
+    <execution id="11">      
+      <position height="81" width="384" x="436" y="296"/>    
+    </execution>  
+  </object>  
+  <object id="14" language="java" name="org.springframework.http.converter.json.MappingJackson2HttpMessageConverter" 
+    project="org.springframework_spring-webmvc_5.0.10.RELEASE" 
+    file="D:/repository/org/springframework/spring-web/5.0.10.RELEASE/spring-web-5.0.10.RELEASE.jar" binary="true" 
+    label="mappingJackson2HttpMessageConverter" type="class" autoSize="true">    
+    <position height="-1" width="-1" x="-250" y="0"/>    
+    <execution id="13">      
+      <position height="27" width="381" x="824" y="323"/>    
+    </execution>  
+  </object>  
+  <message id="3" 
+    operation="handleReturnValue(java.lang.Object,org.springframework.core.MethodParameter,org.springframework.web.method.support.ModelAndViewContainer,org.springframework.web.context.request.NativeWebRequest):void" 
+    asynchronous="false">    
+    <end type="SOURCE" refId="2"/>    
+    <end type="TARGET" refId="4"/>  
+  </message>  
+  <message id="5" 
+    operation="selectHandler(java.lang.Object,org.springframework.core.MethodParameter):org.springframework.web.method.support.HandlerMethodReturnValueHandler" 
+    asynchronous="false">    
+    <end type="SOURCE" refId="4"/>    
+    <end type="TARGET" refId="6"/>  
+  </message>  
+  <message id="7" 
+    operation="handleReturnValue(java.lang.Object,org.springframework.core.MethodParameter,org.springframework.web.method.support.ModelAndViewContainer,org.springframework.web.context.request.NativeWebRequest):void" 
+    asynchronous="false">    
+    <end type="SOURCE" refId="4"/>    
+    <end type="TARGET" refId="8"/>  
+  </message>  
+  <message id="10" 
+    operation="writeWithMessageConverters(T,org.springframework.core.MethodParameter,org.springframework.http.server.ServletServerHttpRequest,org.springframework.http.server.ServletServerHttpResponse):void" 
+    asynchronous="false">    
+    <end type="SOURCE" refId="8"/>    
+    <end type="TARGET" refId="11"/>  
+  </message>  
+  <message id="12" 
+    operation="write(T,java.lang.reflect.Type,org.springframework.http.MediaType,org.springframework.http.HttpOutputMessage):void" 
+    asynchronous="false">    
+    <end type="SOURCE" refId="11"/>    
+    <end type="TARGET" refId="13"/>  
+  </message>
+</sequence-diagram>

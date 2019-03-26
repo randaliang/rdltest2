@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sequence-diagram version="1.2.3" icons="true" generate-combined-fragments="true">  
+  <object id="1" language="java" name="org.springframework.boot.SpringApplication" project="rdltest2" 
+    file="D:/repository/org/springframework/boot/spring-boot/2.0.6.RELEASE/spring-boot-2.0.6.RELEASE.jar" binary="true" 
+    label="springApplication" type="class" autoSize="true">    
+    <position height="-1" width="-1" x="264" y="0"/>    
+    <execution id="2">      
+      <position height="942" width="178" x="5" y="101"/>    
+    </execution>    
+    <execution id="4">      
+      <position height="27" width="178" x="5" y="155"/>    
+    </execution>  
+  </object>  
+  <object id="7" language="java" name="org.springframework.context.support.AbstractApplicationContext" 
+    project="rdltest2" 
+    file="D:/repository/org/springframework/spring-context/5.0.10.RELEASE/spring-context-5.0.10.RELEASE.jar" 
+    binary="true" label="abstractApplicationContext" type="class" autoSize="true">    
+    <position height="-1" width="-1" x="447" y="0"/>    
+    <execution id="6">      
+      <position height="820" width="260" x="187" y="196"/>    
+    </execution>    
+    <execution id="9">      
+      <position height="27" width="7" x="314" y="250"/>    
+    </execution>    
+    <execution id="11">      
+      <position height="27" width="260" x="187" y="307"/>    
+    </execution>    
+    <execution id="13">      
+      <position height="27" width="7" x="314" y="376"/>    
+    </execution>    
+    <execution id="15">      
+      <position height="27" width="7" x="314" y="446"/>    
+    </execution>    
+    <execution id="17">      
+      <position height="27" width="7" x="314" y="517"/>    
+    </execution>    
+    <execution id="19">      
+      <position height="27" width="260" x="187" y="584"/>    
+    </execution>    
+    <execution id="21">      
+      <position height="27" width="7" x="314" y="648"/>    
+    </execution>    
+    <execution id="23">      
+      <position height="27" width="7" x="314" y="707"/>    
+    </execution>    
+    <execution id="25">      
+      <position height="27" width="7" x="314" y="768"/>    
+    </execution>    
+    <execution id="27">      
+      <position height="27" width="7" x="314" y="827"/>    
+    </execution>    
+    <execution id="29">      
+      <position height="27" width="7" x="314" y="897"/>    
+    </execution>    
+    <execution id="31">      
+      <position height="27" width="7" x="314" y="962"/>    
+    </execution>  
+  </object>  
+  <message id="3" operation="refresh(org.springframework.context.ApplicationContext):void" asynchronous="false">    
+    <end type="SOURCE" refId="2"/>    
+    <end type="TARGET" refId="4"/>  
+  </message>  
+  <message id="5" operation="refresh():void" asynchronous="false">    
+    <end type="SOURCE" refId="2"/>    
+    <end type="TARGET" refId="6"/>  
+  </message>  
+  <message id="8" operation="prepareRefresh():void" asynchronous="false">    
+    <end type="SOURCE" refId="6"/>    
+    <end type="TARGET" refId="9"/>  
+  </message>  
+  <message id="10" 
+    operation="obtainFreshBeanFactory():org.springframework.beans.factory.config.ConfigurableListableBeanFactory" 
+    asynchronous="false">    
+    <end type="SOURCE" refId="6"/>    
+    <end type="TARGET" refId="11"/>  
+  </message>  
+  <message id="12" 
+    operation="prepareBeanFactory(org.springframework.beans.factory.config.ConfigurableListableBeanFactory):void" 
+    asynchronous="false">    
+    <end type="SOURCE" refId="6"/>    
+    <end type="TARGET" refId="13"/>  
+  </message>  
+  <message id="14" 
+    operation="postProcessBeanFactory(org.springframework.beans.factory.config.ConfigurableListableBeanFactory):void" 
+    asynchronous="false">    
+    <end type="SOURCE" refId="6"/>    
+    <end type="TARGET" refId="15"/>  
+  </message>  
+  <message id="16" 
+    operation="invokeBeanFactoryPostProcessors(org.springframework.beans.factory.config.ConfigurableListableBeanFactory):void" 
+    asynchronous="false">    
+    <end type="SOURCE" refId="6"/>    
+    <end type="TARGET" refId="17"/>  
+  </message>  
+  <message id="18" 
+    operation="registerBeanPostProcessors(org.springframework.beans.factory.config.ConfigurableListableBeanFactory):void" 
+    asynchronous="false">    
+    <end type="SOURCE" refId="6"/>    
+    <end type="TARGET" refId="19"/>  
+  </message>  
+  <message id="20" operation="initMessageSource():void" asynchronous="false">    
+    <end type="SOURCE" refId="6"/>    
+    <end type="TARGET" refId="21"/>  
+  </message>  
+  <message id="22" operation="initApplicationEventMulticaster():void" asynchronous="false">    
+    <end type="SOURCE" refId="6"/>    
+    <end type="TARGET" refId="23"/>  
+  </message>  
+  <message id="24" operation="onRefresh():void" asynchronous="false">    
+    <end type="SOURCE" refId="6"/>    
+    <end type="TARGET" refId="25"/>  
+  </message>  
+  <message id="26" operation="registerListeners():void" asynchronous="false">    
+    <end type="SOURCE" refId="6"/>    
+    <end type="TARGET" refId="27"/>  
+  </message>  
+  <message id="28" 
+    operation="finishBeanFactoryInitialization(org.springframework.beans.factory.config.ConfigurableListableBeanFactory):void" 
+    asynchronous="false">    
+    <end type="SOURCE" refId="6"/>    
+    <end type="TARGET" refId="29"/>  
+  </message>  
+  <message id="30" operation="finishRefresh():void" asynchronous="false">    
+    <end type="SOURCE" refId="6"/>    
+    <end type="TARGET" refId="31"/>  
+  </message>
+</sequence-diagram>

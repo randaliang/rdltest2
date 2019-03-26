@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sequence-diagram version="1.2.3" icons="true" generate-combined-fragments="true">  
+  <object id="1" language="java" name="org.springframework.context.support.PostProcessorRegistrationDelegate" 
+    project="rdltest2" 
+    file="D:/repository/org/springframework/spring-context/5.0.10.RELEASE/spring-context-5.0.10.RELEASE.jar" 
+    binary="true" label="postProcessorRegistrationDelegate" type="class" autoSize="true">    
+    <position height="-1" width="-1" x="98" y="0"/>    
+    <execution id="2">      
+      <position height="108" width="335" x="5" y="98"/>    
+    </execution>    
+    <execution id="4">      
+      <position height="27" width="335" x="5" y="152"/>    
+    </execution>  
+  </object>  
+  <message id="3" 
+    operation="invokeBeanFactoryPostProcessors(org.springframework.beans.factory.config.ConfigurableListableBeanFactory,java.util.List&lt;org.springframework.beans.factory.config.BeanFactoryPostProcessor&gt;):void" 
+    asynchronous="false">    
+    <end type="SOURCE" refId="2"/>    
+    <end type="TARGET" refId="4"/>  
+  </message>
+</sequence-diagram>

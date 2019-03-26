@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sequence-diagram version="1.2.3" icons="true" generate-combined-fragments="true">  
+  <object id="1" language="java" name="org.springframework.boot.autoconfigure.AutoConfigurationImportSelector" 
+    project="rdltest2" 
+    file="D:/repository/org/springframework/boot/spring-boot-autoconfigure/2.0.6.RELEASE/spring-boot-autoconfigure-2.0.6.RELEASE.jar" 
+    binary="true" label="autoConfigurationImportSelector" type="class" autoSize="true">    
+    <position height="-1" width="-1" x="100" y="0"/>    
+    <execution id="2">      
+      <position height="108" width="312" x="5" y="98"/>    
+    </execution>    
+    <execution id="4">      
+      <position height="27" width="312" x="5" y="152"/>    
+    </execution>  
+  </object>  
+  <message id="3" operation="selectImports(org.springframework.core.type.AnnotationMetadata):java.lang.String[]" 
+    asynchronous="false">    
+    <end type="SOURCE" refId="2"/>    
+    <end type="TARGET" refId="4"/>  
+  </message>
+</sequence-diagram>

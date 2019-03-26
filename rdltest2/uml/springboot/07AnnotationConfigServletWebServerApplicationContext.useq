@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sequence-diagram version="1.2.3" icons="true" generate-combined-fragments="true">  
+  <object id="1" language="java" 
+    name="org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext" 
+    project="mybatis-plus-sample-crud" 
+    file="D:/repository/org/springframework/boot/spring-boot/2.0.6.RELEASE/spring-boot-2.0.6.RELEASE.jar" binary="true" 
+    label="annotationConfigServletWebServerApplicationContext" type="class" autoSize="true">    
+    <position height="-1" width="-1" x="315" y="0"/>    
+    <execution id="2">      
+      <position height="569" width="503" x="5" y="98"/>    
+    </execution>    
+    <execution id="4">      
+      <position height="488" width="503" x="5" y="152"/>    
+    </execution>  
+  </object>  
+  <object id="7" language="java" name="org.springframework.context.annotation.ClassPathBeanDefinitionScanner" 
+    project="rdltest2" 
+    file="D:/repository/org/springframework/spring-context/5.0.10.RELEASE/spring-context-5.0.10.RELEASE.jar" 
+    binary="true" label="classPathBeanDefinitionScanner" type="class" autoSize="true">    
+    <position height="-1" width="-1" x="604" y="0"/>    
+    <execution id="6">      
+      <position height="434" width="311" x="512" y="179"/>    
+    </execution>    
+    <execution id="9">      
+      <position height="353" width="7" x="664" y="233"/>    
+    </execution>    
+    <execution id="11">      
+      <position height="272" width="7" x="664" y="287"/>    
+    </execution>    
+    <execution id="13">      
+      <position height="191" width="7" x="667" y="341"/>    
+    </execution>    
+    <execution id="19">      
+      <position height="27" width="7" x="673" y="538"/>    
+    </execution>  
+  </object>  
+  <object id="20" language="java" 
+    name="org.springframework.context.annotation.ClassPathScanningCandidateComponentProvider" project="rdltest2" 
+    file="D:/repository/org/springframework/spring-context/5.0.10.RELEASE/spring-context-5.0.10.RELEASE.jar" 
+    binary="true" label="classPathScanningCandidateComponentProvider" type="class" autoSize="true">    
+    <position height="-1" width="-1" x="-215" y="0"/>    
+    <execution id="15">      
+      <position height="27" width="456" x="827" y="368"/>    
+    </execution>  
+  </object>  
+  <object id="21" language="java" name="org.springframework.context.annotation.ScannedGenericBeanDefinition" 
+    project="org.springframework_spring-webmvc_5.0.10.RELEASE" 
+    file="D:/repository/org/springframework/spring-context/5.0.10.RELEASE/spring-context-5.0.10.RELEASE.jar" 
+    binary="true" label="scannedGenericBeanDefinition" type="class" autoSize="true">    
+    <position height="-1" width="-1" x="-402" y="0"/>    
+    <execution id="17">      
+      <position height="27" width="297" x="1287" y="413"/>    
+    </execution>  
+  </object>  
+  <object id="22" language="java" name="org.springframework.context.annotation.AnnotatedBeanDefinitionReader" 
+    project="rdltest2" 
+    file="D:/repository/org/springframework/spring-context/5.0.10.RELEASE/spring-context-5.0.10.RELEASE.jar" 
+    binary="true" label="annotatedBeanDefinitionReader" type="class" autoSize="true">    
+    <position height="-1" width="-1" x="701" y="0"/>  
+  </object>  
+  <combined-fragment id="23" interaction-operator="CONSIDER">    
+    <interaction-operand id="24" constraint="AnnotationTypeFilter Componnet,ManagedBean">      
+      <fragment refId="18"/>    
+    </interaction-operand>  
+  </combined-fragment>  
+  <message id="3" 
+    operation="postProcessBeanFactory(org.springframework.beans.factory.config.ConfigurableListableBeanFactory):void" 
+    asynchronous="false">    
+    <end type="SOURCE" refId="2"/>    
+    <end type="TARGET" refId="4"/>  
+  </message>  
+  <message id="5" operation="scan(java.lang.String[]):int" asynchronous="false">    
+    <end type="SOURCE" refId="4"/>    
+    <end type="TARGET" refId="6"/>  
+  </message>  
+  <message id="8" 
+    operation="doScan(java.lang.String[]):java.util.Set&lt;org.springframework.beans.factory.config.BeanDefinitionHolder&gt;" 
+    asynchronous="false">    
+    <end type="SOURCE" refId="6"/>    
+    <end type="TARGET" refId="9"/>  
+  </message>  
+  <message id="10" 
+    operation="findCandidateComponents(java.lang.String):java.util.Set&lt;org.springframework.beans.factory.config.BeanDefinition&gt;" 
+    asynchronous="false">    
+    <end type="SOURCE" refId="9"/>    
+    <end type="TARGET" refId="11"/>  
+  </message>  
+  <message id="12" 
+    operation="scanCandidateComponents(java.lang.String):java.util.Set&lt;org.springframework.beans.factory.config.BeanDefinition&gt;" 
+    asynchronous="false">    
+    <end type="SOURCE" refId="11"/>    
+    <end type="TARGET" refId="13"/>  
+  </message>  
+  <message id="14" operation="isCandidateComponent(org.springframework.core.type.classreading.MetadataReader):boolean" 
+    asynchronous="false">    
+    <end type="SOURCE" refId="13"/>    
+    <end type="TARGET" refId="15"/>  
+  </message>  
+  <message id="16" operation="ScannedGenericBeanDefinition(org.springframework.core.type.classreading.MetadataReader)" 
+    asynchronous="false">    
+    <end type="SOURCE" refId="13"/>    
+    <end type="TARGET" refId="17"/>  
+  </message>  
+  <message id="18" operation="isCandidateComponent(org.springframework.core.type.classreading.MetadataReader):boolean" 
+    asynchronous="false">    
+    <end type="SOURCE" refId="13"/>    
+    <end type="TARGET" refId="19"/>  
+  </message>
+</sequence-diagram>

@@ -11,11 +11,13 @@ import org.beetl.sql.core.orm.OrmCondition;
 import org.beetl.sql.core.orm.OrmQuery;
 
 import lombok.Data;
+import lombok.experimental.Accessors;
 /*
 *
 * gen by beetlsql 2016-01-06
 */
 @Data
+@Accessors(chain = true) 
 @TableTemplate("order by id desc ")
 @OrmQuery(
 	    value={

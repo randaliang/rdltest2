@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sequence-diagram version="1.2.3" icons="true" generate-combined-fragments="true">  
+  <object id="1" language="java" name="org.springframework.context.annotation.ConfigurationClassPostProcessor" 
+    project="mybatis-plus-sample-crud" 
+    file="D:/repository/org/springframework/spring-context/5.0.10.RELEASE/spring-context-5.0.10.RELEASE.jar" 
+    binary="true" label="configurationClassPostProcessor1" type="class" autoSize="true">    
+    <position height="-1" width="-1" x="278" y="0"/>    
+    <execution id="2">      
+      <position height="654" width="317" x="5" y="98"/>    
+    </execution>    
+    <execution id="4">      
+      <position height="573" width="317" x="5" y="152"/>    
+    </execution>  
+  </object>  
+  <object id="9" language="java" name="org.springframework.context.annotation.ConfigurationClassParser" 
+    project="mybatis-plus-sample-crud" 
+    file="D:/repository/org/springframework/spring-context/5.0.10.RELEASE/spring-context-5.0.10.RELEASE.jar" 
+    binary="true" label="configurationClassParser" type="class" autoSize="true">    
+    <position height="-1" width="-1" x="413" y="0"/>    
+    <execution id="6">      
+      <position height="317" width="256" x="326" y="179"/>    
+    </execution>    
+    <execution id="17">      
+      <position height="27" width="256" x="326" y="442"/>    
+    </execution>    
+    <execution id="11">      
+      <position height="27" width="7" x="451" y="233"/>    
+    </execution>    
+    <execution id="13">      
+      <position height="27" width="7" x="451" y="303"/>    
+    </execution>    
+    <execution id="15">      
+      <position height="27" width="7" x="451" y="368"/>    
+    </execution>  
+  </object>  
+  <object id="18" language="java" name="org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader" 
+    project="rdltest2" 
+    file="D:/repository/org/springframework/spring-context/5.0.10.RELEASE/spring-context-5.0.10.RELEASE.jar" 
+    binary="true" label="configurationClassBeanDefinitionReader" type="class" autoSize="true">    
+    <position height="-1" width="-1" x="644" y="0"/>    
+    <execution id="8">      
+      <position height="189" width="381" x="586" y="509"/>    
+    </execution>    
+    <execution id="20">      
+      <position height="108" width="381" x="586" y="563"/>    
+    </execution>    
+    <execution id="22">      
+      <position height="27" width="7" x="773" y="617"/>    
+    </execution>  
+  </object>  
+  <message id="3" 
+    operation="processConfigBeanDefinitions(org.springframework.beans.factory.support.BeanDefinitionRegistry):void" 
+    asynchronous="false">    
+    <end type="SOURCE" refId="2"/>    
+    <end type="TARGET" refId="4"/>  
+  </message>  
+  <message id="5" 
+    operation="parse(java.util.Set&lt;org.springframework.beans.factory.config.BeanDefinitionHolder&gt;):void" 
+    asynchronous="false">    
+    <end type="SOURCE" refId="4"/>    
+    <end type="TARGET" refId="6"/>  
+  </message>  
+  <message id="7" 
+    operation="loadBeanDefinitions(java.util.Set&lt;org.springframework.context.annotation.ConfigurationClass&gt;):void" 
+    asynchronous="false">    
+    <end type="SOURCE" refId="4"/>    
+    <end type="TARGET" refId="8"/>  
+  </message>  
+  <message id="10" operation="parse(org.springframework.core.type.AnnotationMetadata,java.lang.String):void" 
+    asynchronous="false">    
+    <end type="SOURCE" refId="6"/>    
+    <end type="TARGET" refId="11"/>  
+  </message>  
+  <message id="12" operation="parse(java.lang.Class&lt;?&gt;,java.lang.String):void" asynchronous="false">    
+    <end type="SOURCE" refId="6"/>    
+    <end type="TARGET" refId="13"/>  
+  </message>  
+  <message id="14" operation="parse(java.lang.String,java.lang.String):void" asynchronous="false">    
+    <end type="SOURCE" refId="6"/>    
+    <end type="TARGET" refId="15"/>  
+  </message>  
+  <message id="16" operation="processDeferredImportSelectors():void" asynchronous="false">    
+    <end type="SOURCE" refId="6"/>    
+    <end type="TARGET" refId="17"/>  
+  </message>  
+  <message id="19" 
+    operation="loadBeanDefinitionsForConfigurationClass(org.springframework.context.annotation.ConfigurationClass,org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.TrackedConditionEvaluator):void" 
+    asynchronous="false">    
+    <end type="SOURCE" refId="8"/>    
+    <end type="TARGET" refId="20"/>  
+  </message>  
+  <message id="21" operation="loadBeanDefinitionsForBeanMethod(org.springframework.context.annotation.BeanMethod):void" 
+    asynchronous="false">    
+    <end type="SOURCE" refId="20"/>    
+    <end type="TARGET" refId="22"/>  
+  </message>
+</sequence-diagram>

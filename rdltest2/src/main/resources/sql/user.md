@@ -77,4 +77,6 @@ queryIdIn
 ===
   select * from user where id in ( #join(ids)#)
   
-  
+queryAllRole
+===
+select * from role

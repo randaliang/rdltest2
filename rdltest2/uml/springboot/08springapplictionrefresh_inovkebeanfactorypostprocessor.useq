@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sequence-diagram version="1.2.3" icons="true" generate-combined-fragments="true">  
+  <object id="1" language="java" name="org.springframework.context.support.AbstractApplicationContext" 
+    project="rdltest2" 
+    file="D:/repository/org/springframework/spring-context/5.0.10.RELEASE/spring-context-5.0.10.RELEASE.jar" 
+    binary="true" label="abstractApplicationContext" type="class" autoSize="true">    
+    <position height="-1" width="-1" x="170" y="0"/>    
+    <execution id="2">      
+      <position height="432" width="260" x="5" y="98"/>    
+    </execution>    
+    <execution id="4">      
+      <position height="351" width="260" x="5" y="152"/>    
+    </execution>  
+  </object>  
+  <object id="7" language="java" name="org.springframework.context.support.PostProcessorRegistrationDelegate" 
+    project="rdltest2" 
+    file="D:/repository/org/springframework/spring-context/5.0.10.RELEASE/spring-context-5.0.10.RELEASE.jar" 
+    binary="true" label="postProcessorRegistrationDelegate" type="class" autoSize="true">    
+    <position height="-1" width="-1" x="341" y="0"/>    
+    <execution id="6">      
+      <position height="297" width="335" x="269" y="179"/>    
+    </execution>    
+    <execution id="9">      
+      <position height="169" width="7" x="433" y="280"/>    
+    </execution>  
+  </object>  
+  <object id="12" language="java" name="org.springframework.context.annotation.ConfigurationClassPostProcessor" 
+    project="rdltest2" 
+    file="D:/repository/org/springframework/spring-context/5.0.10.RELEASE/spring-context-5.0.10.RELEASE.jar" 
+    binary="true" label="configurationClassPostProcessor" type="class" autoSize="true">    
+    <position height="-1" width="-1" x="-718" y="0"/>    
+    <execution id="11">      
+      <position height="108" width="317" x="1323" y="314"/>    
+    </execution>    
+    <execution id="14">      
+      <position height="27" width="317" x="1323" y="368"/>    
+    </execution>  
+  </object>  
+  <message id="3" 
+    operation="invokeBeanFactoryPostProcessors(org.springframework.beans.factory.config.ConfigurableListableBeanFactory):void" 
+    asynchronous="false">    
+    <end type="SOURCE" refId="2"/>    
+    <end type="TARGET" refId="4"/>  
+  </message>  
+  <message id="5" 
+    operation="invokeBeanFactoryPostProcessors(org.springframework.beans.factory.config.ConfigurableListableBeanFactory,java.util.List&lt;org.springframework.beans.factory.config.BeanFactoryPostProcessor&gt;):void" 
+    asynchronous="false">    
+    <end type="SOURCE" refId="4"/>    
+    <end type="TARGET" refId="6"/>  
+  </message>  
+  <message id="8" 
+    operation="invokeBeanFactoryPostProcessors(java.util.Collection&lt;? extends org.springframework.beans.factory.config.BeanFactoryPostProcessor&gt;,org.springframework.beans.factory.config.ConfigurableListableBeanFactory):void" 
+    asynchronous="false">    
+    <end type="SOURCE" refId="6"/>    
+    <end type="TARGET" refId="9"/>  
+  </message>  
+  <message id="10" 
+    operation="postProcessBeanDefinitionRegistry(org.springframework.beans.factory.support.BeanDefinitionRegistry):void" 
+    asynchronous="false">    
+    <end type="SOURCE" refId="9"/>    
+    <end type="TARGET" refId="11"/>  
+  </message>  
+  <message id="13" 
+    operation="processConfigBeanDefinitions(org.springframework.beans.factory.support.BeanDefinitionRegistry):void" 
+    asynchronous="false">    
+    <end type="SOURCE" refId="11"/>    
+    <end type="TARGET" refId="14"/>  
+  </message>
+</sequence-diagram>

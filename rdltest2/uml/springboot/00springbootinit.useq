@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sequence-diagram version="1.2.3" icons="true" generate-combined-fragments="true">  
+  <object id="1" language="java" name="org.springframework.boot.SpringApplication" project="mybatis-plus-sample-crud" 
+    file="D:/repository/org/springframework/boot/spring-boot/2.0.6.RELEASE/spring-boot-2.0.6.RELEASE.jar" binary="true" 
+    label="springApplication" type="class" autoSize="true">    
+    <position height="-1" width="-1" x="138" y="0"/>    
+    <execution id="2">      
+      <position height="497" width="178" x="5" y="98"/>    
+    </execution>    
+    <execution id="4">      
+      <position height="416" width="178" x="5" y="152"/>    
+    </execution>    
+    <execution id="8">      
+      <position height="27" width="7" x="94" y="243"/>    
+    </execution>    
+    <execution id="10">      
+      <position height="27" width="7" x="94" y="317"/>    
+    </execution>    
+    <execution id="12">      
+      <position height="27" width="7" x="94" y="380"/>    
+    </execution>    
+    <execution id="14">      
+      <position height="27" width="7" x="94" y="449"/>    
+    </execution>    
+    <execution id="16">      
+      <position height="27" width="7" x="94" y="514"/>    
+    </execution>  
+  </object>  
+  <object id="17" language="java" name="org.springframework.boot.WebApplicationType" project="mybatis-plus-sample-crud" 
+    file="D:/repository/org/springframework/boot/spring-boot/2.0.6.RELEASE/spring-boot-2.0.6.RELEASE.jar" binary="true" 
+    label="webApplicationType" type="enumeration" autoSize="true">    
+    <position height="-1" width="-1" x="405" y="0"/>    
+    <execution id="6">      
+      <position height="27" width="203" x="187" y="179"/>    
+    </execution>  
+  </object>  
+  <message id="3" operation="SpringApplication(java.lang.Class[]&lt;?&gt;)" asynchronous="false">    
+    <end type="SOURCE" refId="2"/>    
+    <end type="TARGET" refId="4"/>  
+  </message>  
+  <message id="5" operation="deduceFromClasspath():org.springframework.boot.WebApplicationType" asynchronous="false">    
+    <end type="SOURCE" refId="4"/>    
+    <end type="TARGET" refId="6"/>  
+  </message>  
+  <message id="7" operation="getSpringFactoriesInstances(java.lang.Class&lt;T&gt;):java.util.Collection&lt;T&gt;" 
+    asynchronous="false">    
+    <end type="SOURCE" refId="4"/>    
+    <end type="TARGET" refId="8"/>  
+  </message>  
+  <message id="9" 
+    operation="setInitializers(java.util.Collection&lt;? extends org.springframework.context.ApplicationContextInitializer&lt;?&gt;&gt;):void" 
+    asynchronous="false">    
+    <end type="SOURCE" refId="4"/>    
+    <end type="TARGET" refId="10"/>  
+  </message>  
+  <message id="11" operation="getSpringFactoriesInstances(java.lang.Class&lt;T&gt;):java.util.Collection&lt;T&gt;" 
+    asynchronous="false">    
+    <end type="SOURCE" refId="4"/>    
+    <end type="TARGET" refId="12"/>  
+  </message>  
+  <message id="13" 
+    operation="setListeners(java.util.Collection&lt;? extends org.springframework.context.ApplicationListener&lt;?&gt;&gt;):void" 
+    asynchronous="false">    
+    <end type="SOURCE" refId="4"/>    
+    <end type="TARGET" refId="14"/>  
+  </message>  
+  <message id="15" operation="deduceMainApplicationClass():java.lang.Class&lt;?&gt;" asynchronous="false">    
+    <end type="SOURCE" refId="4"/>    
+    <end type="TARGET" refId="16"/>  
+  </message>
+</sequence-diagram>

@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sequence-diagram version="1.2.3" icons="true" generate-combined-fragments="true">  
+  <object id="1" language="java" name="org.springframework.context.annotation.ConfigurationClassParser" 
+    project="rdltest2" 
+    file="D:/repository/org/springframework/spring-context/5.0.10.RELEASE/spring-context-5.0.10.RELEASE.jar" 
+    binary="true" label="configurationClassParser" type="class" autoSize="true">    
+    <position height="-1" width="-1" x="415" y="0"/>    
+    <execution id="2">      
+      <position height="650" width="256" x="5" y="98"/>    
+    </execution>    
+    <execution id="4">      
+      <position height="569" width="256" x="5" y="152"/>    
+    </execution>    
+    <execution id="11">      
+      <position height="27" width="7" x="133" y="263"/>    
+    </execution>    
+    <execution id="10">      
+      <position height="189" width="7" x="130" y="505"/>    
+    </execution>    
+    <execution id="13">      
+      <position height="108" width="7" x="133" y="559"/>    
+    </execution>    
+    <execution id="15">      
+      <position height="27" width="7" x="130" y="613"/>    
+    </execution>  
+  </object>  
+  <object id="16" language="java" 
+    name="org.springframework.context.annotation.ConfigurationClassParser.DeferredImportSelectorHolder" 
+    project="org.springframework_spring-webmvc_5.0.10.RELEASE" 
+    file="D:/repository/org/springframework/spring-context/5.0.10.RELEASE/spring-context-5.0.10.RELEASE.jar" 
+    binary="true" label="deferredImportSelectorHolder" type="class" autoSize="true">    
+    <position height="-1" width="-1" x="-629" y="0"/>    
+    <execution id="6">      
+      <position height="138" width="288" x="265" y="179"/>    
+    </execution>  
+  </object>  
+  <object id="20" language="java" name="org.springframework.boot.autoconfigure.AutoConfigurationImportSelector" 
+    project="rdltest2" 
+    file="D:/repository/org/springframework/boot/spring-boot-autoconfigure/2.0.6.RELEASE/spring-boot-autoconfigure-2.0.6.RELEASE.jar" 
+    binary="true" label="autoConfigurationImportSelector" type="class" autoSize="true">    
+    <position height="-1" width="-1" x="-502" y="0"/>    
+    <execution id="18">      
+      <position height="27" width="312" x="557" y="206"/>    
+    </execution>  
+  </object>  
+  <object id="21" language="java" name="org.springframework.boot.autoconfigure.AutoConfigurationImportSelector" 
+    project="rdltest2" 
+    file="D:/repository/org/springframework/boot/spring-boot-autoconfigure/2.0.6.RELEASE/spring-boot-autoconfigure-2.0.6.RELEASE.jar" 
+    binary="true" label="autoConfigurationImportSelector1" type="class" autoSize="true">    
+    <position height="-1" width="-1" x="-103" y="0"/>  
+  </object>  
+  <object id="22" language="java" 
+    name="org.springframework.context.annotation.ConfigurationClassParser.DeferredImportSelectorGrouping" 
+    project="org.springframework_spring-webmvc_5.0.10.RELEASE" 
+    file="D:/repository/org/springframework/spring-context/5.0.10.RELEASE/spring-context-5.0.10.RELEASE.jar" 
+    binary="true" label="deferredImportSelectorGrouping" type="class" autoSize="true">    
+    <position height="-1" width="-1" x="-415" y="0"/>    
+    <execution id="8">      
+      <position height="135" width="311" x="1189" y="329"/>    
+    </execution>  
+  </object>  
+  <object id="25" language="java" 
+    name="org.springframework.boot.autoconfigure.AutoConfigurationImportSelector.AutoConfigurationGroup" 
+    project="rdltest2" 
+    file="D:/repository/org/springframework/boot/spring-boot-autoconfigure/2.0.6.RELEASE/spring-boot-autoconfigure-2.0.6.RELEASE.jar" 
+    binary="true" label="autoConfigurationGroup" type="class" autoSize="true">    
+    <position height="-1" width="-1" x="-364" y="0"/>    
+    <execution id="24">      
+      <position height="81" width="259" x="1504" y="356"/>    
+    </execution>  
+  </object>  
+  <object id="28" language="java" name="org.springframework.boot.autoconfigure.AutoConfigurationImportSelector" 
+    project="rdltest2" 
+    file="D:/repository/org/springframework/boot/spring-boot-autoconfigure/2.0.6.RELEASE/spring-boot-autoconfigure-2.0.6.RELEASE.jar" 
+    binary="true" label="autoConfigurationImportSelector2" type="class" autoSize="true">    
+    <position height="-1" width="-1" x="-387" y="0"/>    
+    <execution id="27">      
+      <position height="27" width="312" x="1767" y="383"/>    
+    </execution>  
+  </object>  
+  <message id="3" operation="processDeferredImportSelectors():void" asynchronous="false">    
+    <end type="SOURCE" refId="2"/>    
+    <end type="TARGET" refId="4"/>  
+  </message>  
+  <message id="5" operation="getImportSelector():org.springframework.context.annotation.DeferredImportSelector" 
+    asynchronous="false">    
+    <end type="SOURCE" refId="4"/>    
+    <end type="TARGET" refId="6"/>  
+  </message>  
+  <message id="7" 
+    operation="getImports():java.lang.Iterable&lt;org.springframework.context.annotation.DeferredImportSelector.Group.Entry&gt;" 
+    asynchronous="false">    
+    <end type="SOURCE" refId="4"/>    
+    <end type="TARGET" refId="8"/>  
+  </message>  
+  <message id="9" 
+    operation="processImports(org.springframework.context.annotation.ConfigurationClass,org.springframework.context.annotation.ConfigurationClassParser.SourceClass,java.util.Collection&lt;org.springframework.context.annotation.ConfigurationClassParser.SourceClass&gt;,boolean):void" 
+    asynchronous="false">    
+    <end type="SOURCE" refId="4"/>    
+    <end type="TARGET" refId="10"/>  
+  </message>  
+  <message id="12" operation="processConfigurationClass(org.springframework.context.annotation.ConfigurationClass):void" 
+    asynchronous="false">    
+    <end type="SOURCE" refId="10"/>    
+    <end type="TARGET" refId="13"/>  
+  </message>  
+  <message id="14" 
+    operation="doProcessConfigurationClass(org.springframework.context.annotation.ConfigurationClass,org.springframework.context.annotation.ConfigurationClassParser.SourceClass):org.springframework.context.annotation.ConfigurationClassParser.SourceClass" 
+    asynchronous="false">    
+    <end type="SOURCE" refId="13"/>    
+    <end type="TARGET" refId="15"/>  
+  </message>  
+  <message id="17" 
+    operation="getImportGroup():java.lang.Class&lt;? extends org.springframework.context.annotation.DeferredImportSelector.Group&gt;" 
+    asynchronous="false">    
+    <end type="SOURCE" refId="6"/>    
+    <end type="TARGET" refId="18"/>  
+  </message>  
+  <message id="19" asynchronous="false">    
+    <end type="SOURCE" refId="6"/>    
+    <end type="TARGET" refId="11"/>  
+  </message>  
+  <message id="23" 
+    operation="process(org.springframework.core.type.AnnotationMetadata,org.springframework.context.annotation.DeferredImportSelector):void" 
+    asynchronous="false">    
+    <end type="SOURCE" refId="8"/>    
+    <end type="TARGET" refId="24"/>  
+  </message>  
+  <message id="26" operation="selectImports(org.springframework.core.type.AnnotationMetadata):java.lang.String[]" 
+    asynchronous="false">    
+    <end type="SOURCE" refId="24"/>    
+    <end type="TARGET" refId="27"/>  
+  </message>
+</sequence-diagram>
