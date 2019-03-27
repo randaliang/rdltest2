@@ -1,35 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <sequence-diagram version="1.2.3" icons="true" generate-combined-fragments="true">  
   <object id="1" language="java" name="org.springframework.context.annotation.ConfigurationClassParser" 
-    project="mybatis-plus-sample-crud" 
+    project="rdltest2" 
     file="D:/repository/org/springframework/spring-context/5.0.10.RELEASE/spring-context-5.0.10.RELEASE.jar" 
     binary="true" label="configurationClassParser" type="class" autoSize="true">    
     <position height="-1" width="-1" x="415" y="0"/>    
     <execution id="2">      
-      <position height="731" width="256" x="5" y="98"/>    
+      <position height="420" width="256" x="5" y="98"/>    
     </execution>    
     <execution id="4">      
-      <position height="650" width="256" x="5" y="152"/>    
+      <position height="339" width="256" x="5" y="152"/>    
     </execution>    
-    <execution id="11">      
+    <execution id="9">      
       <position height="27" width="7" x="133" y="263"/>    
-    </execution>    
-    <execution id="10">      
-      <position height="270" width="7" x="130" y="505"/>    
-    </execution>    
-    <execution id="13">      
-      <position height="189" width="7" x="133" y="559"/>    
-    </execution>    
-    <execution id="15">      
-      <position height="108" width="7" x="130" y="613"/>    
-    </execution>    
-    <execution id="17">      
-      <position height="27" width="7" x="139" y="667"/>    
     </execution>  
   </object>  
-  <object id="18" language="java" 
+  <object id="10" language="java" 
     name="org.springframework.context.annotation.ConfigurationClassParser.DeferredImportSelectorHolder" 
-    project="mybatis-plus-sample-crud" 
+    project="rdltest2" 
     file="D:/repository/org/springframework/spring-context/5.0.10.RELEASE/spring-context-5.0.10.RELEASE.jar" 
     binary="true" label="deferredImportSelectorHolder" type="class" autoSize="true">    
     <position height="-1" width="-1" x="-629" y="0"/>    
@@ -37,22 +25,22 @@
       <position height="138" width="288" x="265" y="179"/>    
     </execution>  
   </object>  
-  <object id="22" language="java" name="org.springframework.boot.autoconfigure.AutoConfigurationImportSelector" 
+  <object id="14" language="java" name="org.springframework.boot.autoconfigure.AutoConfigurationImportSelector" 
     project="rdltest2" 
     file="D:/repository/org/springframework/boot/spring-boot-autoconfigure/2.0.6.RELEASE/spring-boot-autoconfigure-2.0.6.RELEASE.jar" 
     binary="true" label="autoConfigurationImportSelector" type="class" autoSize="true">    
     <position height="-1" width="-1" x="-502" y="0"/>    
-    <execution id="20">      
+    <execution id="12">      
       <position height="27" width="312" x="557" y="206"/>    
     </execution>  
   </object>  
-  <object id="23" language="java" name="org.springframework.boot.autoconfigure.AutoConfigurationImportSelector" 
+  <object id="15" language="java" name="org.springframework.boot.autoconfigure.AutoConfigurationImportSelector" 
     project="rdltest2" 
     file="D:/repository/org/springframework/boot/spring-boot-autoconfigure/2.0.6.RELEASE/spring-boot-autoconfigure-2.0.6.RELEASE.jar" 
     binary="true" label="autoConfigurationImportSelector1" type="class" autoSize="true">    
     <position height="-1" width="-1" x="-103" y="0"/>  
   </object>  
-  <object id="24" language="java" 
+  <object id="16" language="java" 
     name="org.springframework.context.annotation.ConfigurationClassParser.DeferredImportSelectorGrouping" 
     project="org.springframework_spring-webmvc_5.0.10.RELEASE" 
     file="D:/repository/org/springframework/spring-context/5.0.10.RELEASE/spring-context-5.0.10.RELEASE.jar" 
@@ -62,22 +50,22 @@
       <position height="135" width="311" x="1189" y="329"/>    
     </execution>  
   </object>  
-  <object id="27" language="java" 
+  <object id="19" language="java" 
     name="org.springframework.boot.autoconfigure.AutoConfigurationImportSelector.AutoConfigurationGroup" 
     project="rdltest2" 
     file="D:/repository/org/springframework/boot/spring-boot-autoconfigure/2.0.6.RELEASE/spring-boot-autoconfigure-2.0.6.RELEASE.jar" 
     binary="true" label="autoConfigurationGroup" type="class" autoSize="true">    
     <position height="-1" width="-1" x="-364" y="0"/>    
-    <execution id="26">      
+    <execution id="18">      
       <position height="81" width="259" x="1504" y="356"/>    
     </execution>  
   </object>  
-  <object id="30" language="java" name="org.springframework.boot.autoconfigure.AutoConfigurationImportSelector" 
+  <object id="22" language="java" name="org.springframework.boot.autoconfigure.AutoConfigurationImportSelector" 
     project="rdltest2" 
     file="D:/repository/org/springframework/boot/spring-boot-autoconfigure/2.0.6.RELEASE/spring-boot-autoconfigure-2.0.6.RELEASE.jar" 
     binary="true" label="autoConfigurationImportSelector2" type="class" autoSize="true">    
     <position height="-1" width="-1" x="-387" y="0"/>    
-    <execution id="29">      
+    <execution id="21">      
       <position height="27" width="312" x="1767" y="383"/>    
     </execution>  
   </object>  
@@ -96,48 +84,25 @@
     <end type="SOURCE" refId="4"/>    
     <end type="TARGET" refId="8"/>  
   </message>  
-  <message id="9" 
-    operation="processImports(org.springframework.context.annotation.ConfigurationClass,org.springframework.context.annotation.ConfigurationClassParser.SourceClass,java.util.Collection&lt;org.springframework.context.annotation.ConfigurationClassParser.SourceClass&gt;,boolean):void" 
-    asynchronous="false">    
-    <end type="SOURCE" refId="4"/>    
-    <end type="TARGET" refId="10"/>  
-  </message>  
-  <message id="12" operation="processConfigurationClass(org.springframework.context.annotation.ConfigurationClass):void" 
-    asynchronous="false">    
-    <end type="SOURCE" refId="10"/>    
-    <end type="TARGET" refId="13"/>  
-  </message>  
-  <message id="14" 
-    operation="doProcessConfigurationClass(org.springframework.context.annotation.ConfigurationClass,org.springframework.context.annotation.ConfigurationClassParser.SourceClass):org.springframework.context.annotation.ConfigurationClassParser.SourceClass" 
-    asynchronous="false">    
-    <end type="SOURCE" refId="13"/>    
-    <end type="TARGET" refId="15"/>  
-  </message>  
-  <message id="16" 
-    operation="retrieveBeanMethodMetadata(org.springframework.context.annotation.ConfigurationClassParser.SourceClass):java.util.Set&lt;org.springframework.core.type.MethodMetadata&gt;" 
-    asynchronous="false">    
-    <end type="SOURCE" refId="15"/>    
-    <end type="TARGET" refId="17"/>  
-  </message>  
-  <message id="19" 
+  <message id="11" 
     operation="getImportGroup():java.lang.Class&lt;? extends org.springframework.context.annotation.DeferredImportSelector.Group&gt;" 
     asynchronous="false">    
     <end type="SOURCE" refId="6"/>    
-    <end type="TARGET" refId="20"/>  
+    <end type="TARGET" refId="12"/>  
   </message>  
-  <message id="21" asynchronous="false">    
+  <message id="13" asynchronous="false">    
     <end type="SOURCE" refId="6"/>    
-    <end type="TARGET" refId="11"/>  
+    <end type="TARGET" refId="9"/>  
   </message>  
-  <message id="25" 
+  <message id="17" 
     operation="process(org.springframework.core.type.AnnotationMetadata,org.springframework.context.annotation.DeferredImportSelector):void" 
     asynchronous="false">    
     <end type="SOURCE" refId="8"/>    
-    <end type="TARGET" refId="26"/>  
+    <end type="TARGET" refId="18"/>  
   </message>  
-  <message id="28" operation="selectImports(org.springframework.core.type.AnnotationMetadata):java.lang.String[]" 
+  <message id="20" operation="selectImports(org.springframework.core.type.AnnotationMetadata):java.lang.String[]" 
     asynchronous="false">    
-    <end type="SOURCE" refId="26"/>    
-    <end type="TARGET" refId="29"/>  
+    <end type="SOURCE" refId="18"/>    
+    <end type="TARGET" refId="21"/>  
   </message>
 </sequence-diagram>

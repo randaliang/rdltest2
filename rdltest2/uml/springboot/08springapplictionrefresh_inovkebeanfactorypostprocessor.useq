@@ -20,20 +20,30 @@
     <execution id="6">      
       <position height="297" width="335" x="269" y="179"/>    
     </execution>    
-    <execution id="9">      
+    <execution id="11">      
       <position height="169" width="7" x="433" y="280"/>    
     </execution>  
   </object>  
-  <object id="12" language="java" name="org.springframework.context.annotation.ConfigurationClassPostProcessor" 
+  <object id="14" language="java" 
+    name="org.springframework.boot.autoconfigure.SharedMetadataReaderFactoryContextInitializer.CachingMetadataReaderFactoryPostProcessor" 
+    project="mybatis-plus-sample-crud" 
+    file="D:/repository/org/springframework/boot/spring-boot-autoconfigure/2.0.6.RELEASE/spring-boot-autoconfigure-2.0.6.RELEASE.jar" 
+    binary="true" label="cachingMetadataReaderFactoryPostProcessor" type="class" autoSize="true">    
+    <position height="-1" width="-1" x="717" y="0"/>  
+  </object>  
+  <object id="15" language="java" name="org.springframework.context.annotation.ConfigurationClassPostProcessor" 
     project="rdltest2" 
     file="D:/repository/org/springframework/spring-context/5.0.10.RELEASE/spring-context-5.0.10.RELEASE.jar" 
     binary="true" label="configurationClassPostProcessor" type="class" autoSize="true">    
     <position height="-1" width="-1" x="-718" y="0"/>    
-    <execution id="11">      
+    <execution id="13">      
       <position height="108" width="317" x="1323" y="314"/>    
     </execution>    
-    <execution id="14">      
+    <execution id="17">      
       <position height="27" width="317" x="1323" y="368"/>    
+    </execution>    
+    <execution id="9">      
+      <position height="27" width="317" x="1042" y="206"/>    
     </execution>  
   </object>  
   <message id="3" 
@@ -49,21 +59,27 @@
     <end type="TARGET" refId="6"/>  
   </message>  
   <message id="8" 
-    operation="invokeBeanFactoryPostProcessors(java.util.Collection&lt;? extends org.springframework.beans.factory.config.BeanFactoryPostProcessor&gt;,org.springframework.beans.factory.config.ConfigurableListableBeanFactory):void" 
+    operation="postProcessBeanDefinitionRegistry(org.springframework.beans.factory.support.BeanDefinitionRegistry):void" 
     asynchronous="false">    
     <end type="SOURCE" refId="6"/>    
     <end type="TARGET" refId="9"/>  
   </message>  
   <message id="10" 
-    operation="postProcessBeanDefinitionRegistry(org.springframework.beans.factory.support.BeanDefinitionRegistry):void" 
+    operation="invokeBeanFactoryPostProcessors(java.util.Collection&lt;? extends org.springframework.beans.factory.config.BeanFactoryPostProcessor&gt;,org.springframework.beans.factory.config.ConfigurableListableBeanFactory):void" 
     asynchronous="false">    
-    <end type="SOURCE" refId="9"/>    
+    <end type="SOURCE" refId="6"/>    
     <end type="TARGET" refId="11"/>  
   </message>  
-  <message id="13" 
-    operation="processConfigBeanDefinitions(org.springframework.beans.factory.support.BeanDefinitionRegistry):void" 
+  <message id="12" 
+    operation="postProcessBeanDefinitionRegistry(org.springframework.beans.factory.support.BeanDefinitionRegistry):void" 
     asynchronous="false">    
     <end type="SOURCE" refId="11"/>    
-    <end type="TARGET" refId="14"/>  
+    <end type="TARGET" refId="13"/>  
+  </message>  
+  <message id="16" 
+    operation="processConfigBeanDefinitions(org.springframework.beans.factory.support.BeanDefinitionRegistry):void" 
+    asynchronous="false">    
+    <end type="SOURCE" refId="13"/>    
+    <end type="TARGET" refId="17"/>  
   </message>
 </sequence-diagram>
