@@ -6,13 +6,13 @@
     label="abstractBeanFactory" type="class" autoSize="true">    
     <position height="-1" width="-1" x="198" y="0"/>    
     <execution id="2">      
-      <position height="751" width="277" x="5" y="98"/>    
+      <position height="794" width="277" x="5" y="98"/>    
     </execution>    
     <execution id="4">      
-      <position height="670" width="277" x="5" y="152"/>    
+      <position height="713" width="277" x="5" y="152"/>    
     </execution>    
     <execution id="6">      
-      <position height="589" width="7" x="140" y="206"/>    
+      <position height="632" width="7" x="140" y="206"/>    
     </execution>  
   </object>  
   <object id="9" language="java" name="org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory" 
@@ -21,10 +21,10 @@
     label="abstractAutowireCapableBeanFactory" type="class" autoSize="true">    
     <position height="-1" width="-1" x="311" y="0"/>    
     <execution id="8">      
-      <position height="535" width="352" x="286" y="233"/>    
+      <position height="578" width="352" x="286" y="233"/>    
     </execution>    
     <execution id="11">      
-      <position height="449" width="352" x="286" y="292"/>    
+      <position height="492" width="352" x="286" y="292"/>    
     </execution>    
     <execution id="13">      
       <position height="162" width="7" x="459" y="346"/>    
@@ -33,7 +33,7 @@
       <position height="81" width="7" x="462" y="400"/>    
     </execution>    
     <execution id="15">      
-      <position height="165" width="7" x="462" y="549"/>    
+      <position height="208" width="7" x="462" y="549"/>    
     </execution>    
     <execution id="21">      
       <position height="27" width="7" x="462" y="603"/>    
@@ -42,7 +42,16 @@
       <position height="27" width="7" x="462" y="660"/>    
     </execution>  
   </object>  
-  <object id="24" language="java" 
+  <object id="26" language="java" name="org.springframework.beans.factory.config.InstantiationAwareBeanPostProcessor" 
+    project="rdltest2" 
+    file="D:/repository/org/springframework/spring-beans/5.0.10.RELEASE/spring-beans-5.0.10.RELEASE.jar" binary="true" 
+    label="instantiationAwareBeanPostProcessor" type="interface" autoSize="true">    
+    <position height="-1" width="-1" x="796" y="0"/>    
+    <execution id="25">      
+      <position height="27" width="359" x="642" y="703"/>    
+    </execution>  
+  </object>  
+  <object id="27" language="java" 
     name="org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor" project="rdltest2" 
     file="D:/repository/org/springframework/spring-beans/5.0.10.RELEASE/spring-beans-5.0.10.RELEASE.jar" binary="true" 
     label="autowiredAnnotationBeanPostProcessor" type="class" autoSize="true">    
@@ -107,5 +116,11 @@
     asynchronous="false">    
     <end type="SOURCE" refId="15"/>    
     <end type="TARGET" refId="23"/>  
+  </message>  
+  <message id="24" 
+    operation="postProcessPropertyValues(org.springframework.beans.PropertyValues,java.beans.PropertyDescriptor[],java.lang.Object,java.lang.String):org.springframework.beans.PropertyValues" 
+    asynchronous="false">    
+    <end type="SOURCE" refId="15"/>    
+    <end type="TARGET" refId="25"/>  
   </message>
 </sequence-diagram>
