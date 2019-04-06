@@ -1,65 +1,47 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <sequence-diagram version="1.2.3" icons="true" generate-combined-fragments="true">  
   <object id="1" language="java" name="org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory" 
-    project="org.springframework_spring-webmvc_5.0.10.RELEASE" 
+    project="mybatis-plus-sample-crud" 
     file="D:/repository/org/springframework/spring-beans/5.0.10.RELEASE/spring-beans-5.0.10.RELEASE.jar" binary="true" 
     label="abstractAutowireCapableBeanFactory" type="class" autoSize="true">    
     <position height="-1" width="-1" x="171" y="0"/>    
     <execution id="2">      
-      <position height="961" width="352" x="5" y="103"/>    
+      <position height="463" width="352" x="5" y="103"/>    
     </execution>    
     <execution id="4">      
-      <position height="880" width="352" x="5" y="157"/>    
+      <position height="382" width="352" x="5" y="157"/>    
     </execution>    
     <execution id="10">      
-      <position height="27" width="7" x="178" y="329"/>    
+      <position height="27" width="7" x="178" y="345"/>    
     </execution>    
     <execution id="14">      
-      <position height="512" width="7" x="181" y="498"/>    
+      <position height="27" width="7" x="181" y="485"/>    
     </execution>    
     <execution id="6">      
       <position height="27" width="7" x="181" y="214"/>    
     </execution>    
-    <execution id="16">      
-      <position height="27" width="7" x="181" y="554"/>    
-    </execution>    
-    <execution id="20">      
-      <position height="27" width="7" x="184" y="810"/>    
-    </execution>    
-    <execution id="22">      
-      <position height="90" width="7" x="181" y="893"/>    
-    </execution>    
-    <execution id="18">      
-      <position height="91" width="7" x="181" y="657"/>    
-    </execution>    
     <execution id="8">      
-      <position height="27" width="7" x="181" y="268"/>    
+      <position height="27" width="7" x="181" y="273"/>    
     </execution>    
     <execution id="12">      
-      <position height="27" width="7" x="181" y="408"/>    
+      <position height="27" width="7" x="181" y="417"/>    
     </execution>  
   </object>  
-  <object id="27" language="java" name="org.springframework.beans.factory.BeanNameAware" 
+  <object id="15" language="java" name="org.springframework.beans.factory.BeanNameAware" 
     project="org.springframework_spring-webmvc_5.0.10.RELEASE" 
     file="D:/repository/org/springframework/spring-beans/5.0.10.RELEASE/spring-beans-5.0.10.RELEASE.jar" binary="true" 
     label="beanNameAware" type="interface" autoSize="true">    
     <position height="-1" width="-1" x="461" y="0"/>  
   </object>  
-  <object id="28" language="java" name="org.springframework.beans.factory.BeanFactoryAware" project="rdltest2" 
+  <object id="16" language="java" name="org.springframework.beans.factory.BeanFactoryAware" project="rdltest2" 
     file="D:/repository/org/springframework/spring-beans/5.0.10.RELEASE/spring-beans-5.0.10.RELEASE.jar" binary="true" 
     label="beanFactoryAware" type="interface" autoSize="true">    
     <position height="-1" width="-1" x="468" y="0"/>  
   </object>  
-  <object id="29" language="java" name="org.springframework.beans.factory.config.BeanPostProcessor" project="rdltest2" 
+  <object id="17" language="java" name="org.springframework.beans.factory.config.BeanPostProcessor" project="rdltest2" 
     file="D:/repository/org/springframework/spring-beans/5.0.10.RELEASE/spring-beans-5.0.10.RELEASE.jar" binary="true" 
     label="beanPostProcessor" type="interface" autoSize="true">    
-    <position height="-1" width="-1" x="684" y="0"/>    
-    <execution id="26">      
-      <position height="27" width="267" x="821" y="694"/>    
-    </execution>    
-    <execution id="24">      
-      <position height="27" width="267" x="821" y="929"/>    
-    </execution>  
+    <position height="-1" width="-1" x="684" y="0"/>  
   </object>  
   <message id="3" 
     operation="doCreateBean(java.lang.String,org.springframework.beans.factory.support.RootBeanDefinition,java.lang.Object[]):java.lang.Object" 
@@ -96,37 +78,5 @@
     asynchronous="false">    
     <end type="SOURCE" refId="4"/>    
     <end type="TARGET" refId="14"/>  
-  </message>  
-  <message id="15" operation="invokeAwareMethods(java.lang.String,java.lang.Object):void" asynchronous="false">    
-    <end type="SOURCE" refId="14"/>    
-    <end type="TARGET" refId="16"/>  
-  </message>  
-  <message id="17" 
-    operation="applyBeanPostProcessorsBeforeInitialization(java.lang.Object,java.lang.String):java.lang.Object" 
-    asynchronous="false">    
-    <end type="SOURCE" refId="14"/>    
-    <end type="TARGET" refId="18"/>  
-  </message>  
-  <message id="19" 
-    operation="invokeInitMethods(java.lang.String,java.lang.Object,org.springframework.beans.factory.support.RootBeanDefinition):void" 
-    asynchronous="false">    
-    <end type="SOURCE" refId="14"/>    
-    <end type="TARGET" refId="20"/>  
-  </message>  
-  <message id="21" 
-    operation="applyBeanPostProcessorsAfterInitialization(java.lang.Object,java.lang.String):java.lang.Object" 
-    asynchronous="false">    
-    <end type="SOURCE" refId="14"/>    
-    <end type="TARGET" refId="22"/>  
-  </message>  
-  <message id="23" operation="postProcessAfterInitialization(java.lang.Object,java.lang.String):java.lang.Object" 
-    asynchronous="false">    
-    <end type="SOURCE" refId="22"/>    
-    <end type="TARGET" refId="24"/>  
-  </message>  
-  <message id="25" operation="postProcessBeforeInitialization(java.lang.Object,java.lang.String):java.lang.Object" 
-    asynchronous="false">    
-    <end type="SOURCE" refId="18"/>    
-    <end type="TARGET" refId="26"/>  
   </message>
 </sequence-diagram>
