@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sequence-diagram version="1.2.3" icons="true" generate-combined-fragments="true">  
+  <object id="1" language="java" name="java.util.concurrent.CyclicBarrier" project="rdltest2" 
+    file="C:/Java/jdk1.8.0_111/jre/lib/rt.jar" binary="true" label="cyclicBarrier" type="class" autoSize="true">    
+    <position height="-1" width="-1" x="202" y="0"/>    
+    <execution id="2">      
+      <position height="302" width="137" x="5" y="103"/>    
+    </execution>    
+    <execution id="4">      
+      <position height="221" width="137" x="5" y="157"/>    
+    </execution>    
+    <execution id="6">      
+      <position height="140" width="7" x="73" y="211"/>    
+    </execution>    
+    <execution id="10">      
+      <position height="27" width="7" x="76" y="297"/>    
+    </execution>  
+  </object>  
+  <object id="11" language="java" name="java.util.concurrent.locks.ReentrantLock" project="rdltest2" 
+    file="C:/Java/jdk1.8.0_111/jre/lib/rt.jar" binary="true" label="reentrantLock" type="class" autoSize="true">    
+    <position height="-1" width="-1" x="413" y="0"/>    
+    <execution id="8">      
+      <position height="27" width="163" x="146" y="238"/>    
+    </execution>  
+  </object>  
+  <message id="3" operation="await():int" asynchronous="false">    
+    <end type="SOURCE" refId="2"/>    
+    <end type="TARGET" refId="4"/>  
+  </message>  
+  <message id="5" operation="dowait(boolean,long):int" asynchronous="false">    
+    <end type="SOURCE" refId="4"/>    
+    <end type="TARGET" refId="6"/>  
+  </message>  
+  <message id="7" operation="lock():void" asynchronous="false">    
+    <end type="SOURCE" refId="6"/>    
+    <end type="TARGET" refId="8"/>  
+  </message>  
+  <message id="9" operation="nextGeneration():void" asynchronous="false">    
+    <end type="SOURCE" refId="6"/>    
+    <end type="TARGET" refId="10"/>  
+  </message>
+</sequence-diagram>

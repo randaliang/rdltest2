@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sequence-diagram version="1.2.3" icons="true" generate-combined-fragments="true">  
+  <object id="1" language="java" name="java.util.concurrent.locks.AbstractQueuedSynchronizer" project="rdltest2" 
+    file="C:/Java/jdk1.8.0_111/jre/lib/rt.jar" binary="true" label="abstractQueuedSynchronizer" type="class" 
+    autoSize="true">    
+    <position height="-1" width="-1" x="279" y="0"/>    
+    <execution id="2">      
+      <position height="343" width="277" x="5" y="98"/>    
+    </execution>    
+    <execution id="4">      
+      <position height="262" width="277" x="5" y="152"/>    
+    </execution>    
+    <execution id="6">      
+      <position height="27" width="7" x="143" y="206"/>    
+    </execution>    
+    <execution id="8">      
+      <position height="27" width="7" x="143" y="256"/>    
+    </execution>    
+    <execution id="12">      
+      <position height="27" width="7" x="140" y="360"/>    
+    </execution>  
+  </object>  
+  <object id="13" language="java" name="java.util.concurrent.locks.ReentrantLock.Sync" project="rdltest2" 
+    file="C:/Java/jdk1.8.0_111/jre/lib/rt.jar" binary="true" label="sync" type="class" autoSize="true">    
+    <position height="-1" width="-1" x="-102" y="0"/>    
+    <execution id="10">      
+      <position height="27" width="163" x="286" y="288"/>    
+    </execution>  
+  </object>  
+  <message id="3" operation="fullyRelease(java.util.concurrent.locks.AbstractQueuedSynchronizer.Node):int" 
+    asynchronous="false">    
+    <end type="SOURCE" refId="2"/>    
+    <end type="TARGET" refId="4"/>  
+  </message>  
+  <message id="5" operation="getState():int" asynchronous="false">    
+    <end type="SOURCE" refId="4"/>    
+    <end type="TARGET" refId="6"/>  
+  </message>  
+  <message id="7" operation="release(int):boolean" asynchronous="false">    
+    <end type="SOURCE" refId="4"/>    
+    <end type="TARGET" refId="8"/>  
+  </message>  
+  <message id="9" operation="tryRelease(int):boolean" asynchronous="false">    
+    <end type="SOURCE" refId="4"/>    
+    <end type="TARGET" refId="10"/>  
+  </message>  
+  <message id="11" operation="unparkSuccessor(java.util.concurrent.locks.AbstractQueuedSynchronizer.Node):void" 
+    asynchronous="false">    
+    <end type="SOURCE" refId="4"/>    
+    <end type="TARGET" refId="12"/>  
+  </message>
+</sequence-diagram>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sequence-diagram version="1.2.3" icons="true" generate-combined-fragments="true">  
+  <object id="1" language="java" name="java.util.concurrent.ConcurrentLinkedQueue" project="daliang" 
+    file="C:/Java/jdk1.8.0_111/jre/lib/rt.jar" binary="true" label="concurrentLinkedQueue" type="class" autoSize="true">    
+    <position height="-1" width="-1" x="194" y="0"/>    
+    <execution id="2">      
+      <position height="264" width="272" x="5" y="99"/>    
+    </execution>    
+    <execution id="4">      
+      <position height="183" width="272" x="5" y="153"/>    
+    </execution>    
+    <execution id="10">      
+      <position height="27" width="7" x="141" y="282"/>    
+    </execution>  
+  </object>  
+  <object id="11" language="java" name="java.util.concurrent.ConcurrentLinkedQueue.Node" project="rdltest2" 
+    file="C:/Java/jdk1.8.0_111/jre/lib/rt.jar" binary="true" label="node" type="class" autoSize="true">    
+    <position height="-1" width="-1" x="53" y="0"/>    
+    <execution id="6">      
+      <position height="27" width="127" x="281" y="180"/>    
+    </execution>    
+    <execution id="8">      
+      <position height="27" width="127" x="281" y="221"/>    
+    </execution>  
+  </object>  
+  <message id="3" operation="offer(E):boolean" asynchronous="false">    
+    <end type="SOURCE" refId="2"/>    
+    <end type="TARGET" refId="4"/>  
+  </message>  
+  <message id="5" operation="Node(E)" asynchronous="false">    
+    <end type="SOURCE" refId="4"/>    
+    <end type="TARGET" refId="6"/>  
+  </message>  
+  <message id="7" 
+    operation="casNext(java.util.concurrent.ConcurrentLinkedQueue.Node&lt;E&gt;,java.util.concurrent.ConcurrentLinkedQueue.Node&lt;E&gt;):boolean" 
+    asynchronous="false">    
+    <end type="SOURCE" refId="4"/>    
+    <end type="TARGET" refId="8"/>  
+  </message>  
+  <message id="9" 
+    operation="casTail(java.util.concurrent.ConcurrentLinkedQueue.Node&lt;E&gt;,java.util.concurrent.ConcurrentLinkedQueue.Node&lt;E&gt;):boolean" 
+    asynchronous="false">    
+    <end type="SOURCE" refId="4"/>    
+    <end type="TARGET" refId="10"/>  
+  </message>
+</sequence-diagram>

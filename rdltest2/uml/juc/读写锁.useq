@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sequence-diagram version="1.2.3" icons="true" generate-combined-fragments="true">  
+  <object id="1" language="java" name="java.util.concurrent.locks.ReentrantReadWriteLock.Sync" project="rdltest2" 
+    file="C:/Java/jdk1.8.0_111/jre/lib/rt.jar" binary="true" label="sync" type="class" autoSize="true">    
+    <position height="-1" width="-1" x="-67" y="0"/>    
+    <execution id="2">      
+      <position height="600" width="163" x="5" y="125"/>    
+    </execution>    
+    <execution id="5">      
+      <position height="27" width="7" x="83" y="179"/>    
+    </execution>    
+    <execution id="6">      
+      <position height="27" width="7" x="83" y="305"/>    
+    </execution>  
+  </object>  
+  <object id="7" language="java" name="java.util.concurrent.locks.AbstractQueuedSynchronizer" project="rdltest2" 
+    file="C:/Java/jdk1.8.0_111/jre/lib/rt.jar" binary="true" label="abstractQueuedSynchronizer" type="class" 
+    autoSize="true">    
+    <position height="-1" width="-1" x="321" y="0"/>    
+    <execution id="4">      
+      <position height="546" width="277" x="172" y="152"/>    
+    </execution>    
+    <execution id="10">      
+      <position height="447" width="7" x="307" y="224"/>    
+    </execution>    
+    <execution id="12">      
+      <position height="366" width="7" x="307" y="278"/>    
+    </execution>    
+    <execution id="15">      
+      <position height="27" width="7" x="313" y="355"/>    
+    </execution>    
+    <execution id="17">      
+      <position height="27" width="7" x="313" y="422"/>    
+    </execution>    
+    <execution id="19">      
+      <position height="27" width="7" x="313" y="476"/>    
+    </execution>    
+    <execution id="21">      
+      <position height="27" width="7" x="313" y="540"/>    
+    </execution>    
+    <execution id="23">      
+      <position height="27" width="7" x="313" y="590"/>    
+    </execution>  
+  </object>  
+  <message id="3" operation="acquireShared(int):void" asynchronous="false">    
+    <end type="SOURCE" refId="2"/>    
+    <end type="TARGET" refId="4"/>  
+  </message>  
+  <message id="8" operation="tryAcquireShared(int):int" asynchronous="false">    
+    <end type="SOURCE" refId="4"/>    
+    <end type="TARGET" refId="5"/>  
+  </message>  
+  <message id="9" operation="doAcquireShared(int):void" asynchronous="false">    
+    <end type="SOURCE" refId="4"/>    
+    <end type="TARGET" refId="10"/>  
+  </message>  
+  <message id="11" 
+    operation="addWaiter(java.util.concurrent.locks.AbstractQueuedSynchronizer.Node):java.util.concurrent.locks.AbstractQueuedSynchronizer.Node" 
+    asynchronous="false">    
+    <end type="SOURCE" refId="10"/>    
+    <end type="TARGET" refId="12"/>  
+  </message>  
+  <message id="13" operation="tryAcquireShared(int):int" asynchronous="false">    
+    <end type="SOURCE" refId="12"/>    
+    <end type="TARGET" refId="6"/>  
+  </message>  
+  <message id="14" operation="setHeadAndPropagate(java.util.concurrent.locks.AbstractQueuedSynchronizer.Node,int):void" 
+    asynchronous="false">    
+    <end type="SOURCE" refId="12"/>    
+    <end type="TARGET" refId="15"/>  
+  </message>  
+  <message id="16" operation="selfInterrupt():void" asynchronous="false">    
+    <end type="SOURCE" refId="12"/>    
+    <end type="TARGET" refId="17"/>  
+  </message>  
+  <message id="18" 
+    operation="shouldParkAfterFailedAcquire(java.util.concurrent.locks.AbstractQueuedSynchronizer.Node,java.util.concurrent.locks.AbstractQueuedSynchronizer.Node):boolean" 
+    asynchronous="false">    
+    <end type="SOURCE" refId="12"/>    
+    <end type="TARGET" refId="19"/>  
+  </message>  
+  <message id="20" operation="parkAndCheckInterrupt():boolean" asynchronous="false">    
+    <end type="SOURCE" refId="12"/>    
+    <end type="TARGET" refId="21"/>  
+  </message>  
+  <message id="22" operation="cancelAcquire(java.util.concurrent.locks.AbstractQueuedSynchronizer.Node):void" 
+    asynchronous="false">    
+    <end type="SOURCE" refId="12"/>    
+    <end type="TARGET" refId="23"/>  
+  </message>
+</sequence-diagram>

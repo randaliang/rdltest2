@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sequence-diagram version="1.2.3" icons="true" generate-combined-fragments="true">  
+  <object id="1" language="java" name="java.util.concurrent.locks.AbstractQueuedSynchronizer.ConditionObject" 
+    project="rdltest2" file="C:/Java/jdk1.8.0_111/jre/lib/rt.jar" binary="true" label="conditionObject" type="class" 
+    autoSize="true">    
+    <position height="-1" width="-1" x="49" y="0"/>    
+    <execution id="2">      
+      <position height="495" width="164" x="5" y="98"/>    
+    </execution>    
+    <execution id="4">      
+      <position height="414" width="164" x="5" y="152"/>    
+    </execution>    
+    <execution id="6">      
+      <position height="333" width="7" x="87" y="206"/>    
+    </execution>  
+  </object>  
+  <object id="9" language="java" name="java.util.concurrent.locks.AbstractQueuedSynchronizer" project="rdltest2" 
+    file="C:/Java/jdk1.8.0_111/jre/lib/rt.jar" binary="true" label="abstractQueuedSynchronizer" type="class" 
+    autoSize="true">    
+    <position height="-1" width="-1" x="385" y="0"/>    
+    <execution id="8">      
+      <position height="279" width="277" x="173" y="233"/>    
+    </execution>    
+    <execution id="11">      
+      <position height="27" width="7" x="308" y="287"/>    
+    </execution>    
+    <execution id="13">      
+      <position height="27" width="7" x="308" y="351"/>    
+    </execution>    
+    <execution id="15">      
+      <position height="27" width="7" x="308" y="415"/>    
+    </execution>  
+  </object>  
+  <object id="18" language="java" name="java.util.concurrent.locks.LockSupport" project="rdltest2" 
+    file="C:/Java/jdk1.8.0_111/jre/lib/rt.jar" binary="true" label="lockSupport" type="class" autoSize="true">    
+    <position height="-1" width="-1" x="443" y="0"/>    
+    <execution id="17">      
+      <position height="27" width="163" x="454" y="458"/>    
+    </execution>  
+  </object>  
+  <message id="3" operation="signal():void" asynchronous="false">    
+    <end type="SOURCE" refId="2"/>    
+    <end type="TARGET" refId="4"/>  
+  </message>  
+  <message id="5" operation="doSignal(java.util.concurrent.locks.AbstractQueuedSynchronizer.Node):void" 
+    asynchronous="false">    
+    <end type="SOURCE" refId="4"/>    
+    <end type="TARGET" refId="6"/>  
+  </message>  
+  <message id="7" operation="transferForSignal(java.util.concurrent.locks.AbstractQueuedSynchronizer.Node):boolean" 
+    asynchronous="false">    
+    <end type="SOURCE" refId="6"/>    
+    <end type="TARGET" refId="8"/>  
+  </message>  
+  <message id="10" operation="compareAndSetState(int,int):boolean" asynchronous="false">    
+    <end type="SOURCE" refId="8"/>    
+    <end type="TARGET" refId="11"/>  
+  </message>  
+  <message id="12" 
+    operation="enq(java.util.concurrent.locks.AbstractQueuedSynchronizer.Node):java.util.concurrent.locks.AbstractQueuedSynchronizer.Node" 
+    asynchronous="false">    
+    <end type="SOURCE" refId="8"/>    
+    <end type="TARGET" refId="13"/>  
+  </message>  
+  <message id="14" operation="compareAndSetState(int,int):boolean" asynchronous="false">    
+    <end type="SOURCE" refId="8"/>    
+    <end type="TARGET" refId="15"/>  
+  </message>  
+  <message id="16" operation="unpark(java.lang.Thread):void" asynchronous="false">    
+    <end type="SOURCE" refId="8"/>    
+    <end type="TARGET" refId="17"/>  
+  </message>
+</sequence-diagram>

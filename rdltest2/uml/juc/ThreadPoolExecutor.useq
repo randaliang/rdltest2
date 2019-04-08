@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sequence-diagram version="1.2.3" icons="true" generate-combined-fragments="true">  
+  <object id="1" language="java" name="java.util.concurrent.ThreadPoolExecutor" project="rdltest2" 
+    file="C:/Java/jdk1.8.0_111/jre/lib/rt.jar" binary="true" label="threadPoolExecutor" type="class" autoSize="true">    
+    <position height="-1" width="-1" x="239" y="0"/>    
+    <execution id="2">      
+      <position height="412" width="202" x="5" y="98"/>    
+    </execution>    
+    <execution id="5">      
+      <position height="160" width="7" x="103" y="296"/>    
+    </execution>    
+    <execution id="7">      
+      <position height="27" width="7" x="103" y="350"/>    
+    </execution>    
+    <execution id="9">      
+      <position height="27" width="7" x="106" y="402"/>    
+    </execution>  
+  </object>  
+  <object id="10" language="java" name="java.util.concurrent.AbstractExecutorService" project="rdltest2" 
+    file="C:/Java/jdk1.8.0_111/jre/lib/rt.jar" binary="true" label="abstractExecutorService" type="class" 
+    autoSize="true">    
+    <position height="-1" width="-1" x="346" y="0"/>    
+    <execution id="4">      
+      <position height="358" width="235" x="211" y="125"/>    
+    </execution>    
+    <execution id="12">      
+      <position height="27" width="235" x="211" y="179"/>    
+    </execution>  
+  </object>  
+  <message id="3" operation="submit(java.lang.Runnable):java.util.concurrent.Future&lt;?&gt;" asynchronous="false">    
+    <end type="SOURCE" refId="2"/>    
+    <end type="TARGET" refId="4"/>  
+  </message>  
+  <message id="6" operation="workerCountOf(int):int" asynchronous="false">    
+    <end type="SOURCE" refId="5"/>    
+    <end type="TARGET" refId="7"/>  
+  </message>  
+  <message id="8" operation="addWorker(java.lang.Runnable,boolean):boolean" asynchronous="false">    
+    <end type="SOURCE" refId="5"/>    
+    <end type="TARGET" refId="9"/>  
+  </message>  
+  <message id="11" operation="newTaskFor(java.lang.Runnable,T):java.util.concurrent.RunnableFuture&lt;T&gt;" 
+    asynchronous="false">    
+    <end type="SOURCE" refId="4"/>    
+    <end type="TARGET" refId="12"/>  
+  </message>  
+  <message id="13" operation="execute(java.lang.Runnable):void" asynchronous="false">    
+    <end type="SOURCE" refId="4"/>    
+    <end type="TARGET" refId="5"/>  
+  </message>
+</sequence-diagram>

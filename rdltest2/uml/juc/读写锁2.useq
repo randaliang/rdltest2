@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sequence-diagram version="1.2.3" icons="true" generate-combined-fragments="true">  
+  <object id="1" language="java" name="java.util.concurrent.locks.ReentrantReadWriteLock.Sync" project="rdltest2" 
+    file="C:/Java/jdk1.8.0_111/jre/lib/rt.jar" binary="true" label="sync" type="class" autoSize="true">    
+    <position height="-1" width="-1" x="522" y="0"/>    
+    <execution id="2">      
+      <position height="552" width="163" x="5" y="101"/>    
+    </execution>    
+    <execution id="4">      
+      <position height="471" width="163" x="5" y="155"/>    
+    </execution>    
+    <execution id="8">      
+      <position height="27" width="7" x="86" y="214"/>    
+    </execution>    
+    <execution id="10">      
+      <position height="27" width="7" x="86" y="265"/>    
+    </execution>    
+    <execution id="12">      
+      <position height="27" width="7" x="86" y="317"/>    
+    </execution>    
+    <execution id="16">      
+      <position height="199" width="7" x="86" y="400"/>    
+    </execution>    
+    <execution id="20">      
+      <position height="27" width="7" x="89" y="456"/>    
+    </execution>    
+    <execution id="22">      
+      <position height="27" width="7" x="89" y="501"/>    
+    </execution>    
+    <execution id="24">      
+      <position height="27" width="7" x="89" y="545"/>    
+    </execution>  
+  </object>  
+  <object id="25" language="java" name="java.util.concurrent.locks.AbstractQueuedSynchronizer" project="rdltest2" 
+    file="C:/Java/jdk1.8.0_111/jre/lib/rt.jar" binary="true" label="abstractQueuedSynchronizer" type="class" 
+    autoSize="true">    
+    <position height="-1" width="-1" x="482" y="0"/>    
+    <execution id="6">      
+      <position height="27" width="277" x="172" y="182"/>    
+    </execution>    
+    <execution id="14">      
+      <position height="27" width="277" x="172" y="358"/>    
+    </execution>    
+    <execution id="18">      
+      <position height="27" width="277" x="172" y="427"/>    
+    </execution>  
+  </object>  
+  <message id="3" operation="tryAcquireShared(int):int" asynchronous="false">    
+    <end type="SOURCE" refId="2"/>    
+    <end type="TARGET" refId="4"/>  
+  </message>  
+  <message id="5" operation="getState():int" asynchronous="false">    
+    <end type="SOURCE" refId="4"/>    
+    <end type="TARGET" refId="6"/>  
+  </message>  
+  <message id="7" operation="exclusiveCount(int):int" asynchronous="false">    
+    <end type="SOURCE" refId="4"/>    
+    <end type="TARGET" refId="8"/>  
+  </message>  
+  <message id="9" operation="sharedCount(int):int" asynchronous="false">    
+    <end type="SOURCE" refId="4"/>    
+    <end type="TARGET" refId="10"/>  
+  </message>  
+  <message id="11" operation="readerShouldBlock():boolean" asynchronous="false">    
+    <end type="SOURCE" refId="4"/>    
+    <end type="TARGET" refId="12"/>  
+  </message>  
+  <message id="13" operation="compareAndSetState(int,int):boolean" asynchronous="false">    
+    <end type="SOURCE" refId="4"/>    
+    <end type="TARGET" refId="14"/>  
+  </message>  
+  <message id="15" operation="fullTryAcquireShared(java.lang.Thread):int" asynchronous="false">    
+    <end type="SOURCE" refId="4"/>    
+    <end type="TARGET" refId="16"/>  
+  </message>  
+  <message id="17" operation="getState():int" asynchronous="false">    
+    <end type="SOURCE" refId="16"/>    
+    <end type="TARGET" refId="18"/>  
+  </message>  
+  <message id="19" operation="exclusiveCount(int):int" asynchronous="false">    
+    <end type="SOURCE" refId="16"/>    
+    <end type="TARGET" refId="20"/>  
+  </message>  
+  <message id="21" operation="readerShouldBlock():boolean" asynchronous="false">    
+    <end type="SOURCE" refId="16"/>    
+    <end type="TARGET" refId="22"/>  
+  </message>  
+  <message id="23" operation="compareAndSetState(int,int):boolean" asynchronous="false">    
+    <end type="SOURCE" refId="16"/>    
+    <end type="TARGET" refId="24"/>  
+  </message>
+</sequence-diagram>
