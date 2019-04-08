@@ -4,9 +4,13 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
+import java.util.concurrent.ArrayBlockingQueue;
 import java.util.concurrent.Callable;
+import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
+import java.util.concurrent.LinkedBlockingQueue;
 import java.util.concurrent.ScheduledExecutorService;
+import java.util.concurrent.ThreadPoolExecutor;
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.locks.ReentrantLock;
 import java.util.regex.Pattern;
@@ -22,7 +26,11 @@ public class Schedual {
 	public static void main( String args[] ) {
 		
 		ReentrantLock rlock = new ReentrantLock( true );
-		ScheduledExecutorService s = Executors.newScheduledThreadPool(5);
+//		ExecutorService s = Executors.newFixedThreadPool(1);
+		ExecutorService s  = new ThreadPoolExecutor(1, 1,  0L, TimeUnit.MILLISECONDS,
+               new ArrayBlockingQueue<Runnable>(2));
+	
+        
 		List<Callable> list = new ArrayList<Callable>(); 
 		for( i = 0; i < 20; i++) {
 			Callable<String> r = new Callable<String>() {
@@ -35,7 +43,7 @@ public class Schedual {
 //						if( t == 8) {
 //							Thread.currentThread().interrupt();
 //						}
-						Thread.currentThread().sleep(1000L);
+						Thread.currentThread().sleep(10000L);
 						if( t == 8) {
 							Thread.currentThread().interrupt();
 						}
@@ -47,6 +55,7 @@ public class Schedual {
 					return t+"";
 				}
 			};
+			s.
 			s.submit(r);
 		}
 		

@@ -32,6 +32,7 @@ public class ConditionTest {
             System.out.println("set" + string);
             buffer.add(string);
             fullCondition.signal();
+            fullCondition.signal();
         } finally {
             lock.unlock();      //记得释放锁
         }

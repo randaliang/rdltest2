@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sequence-diagram version="1.2.3" icons="true" generate-combined-fragments="true">  
+  <object id="1" language="java" name="java.util.concurrent.locks.ReentrantLock.NonfairSync" project="rdltest2" 
+    file="C:/Java/jdk1.8.0_111/jre/lib/rt.jar" binary="true" label="nonfairSync" type="class" autoSize="true">    
+    <position height="-1" width="-1" x="917" y="0"/>    
+    <execution id="2">      
+      <position height="686" width="163" x="280" y="98"/>    
+    </execution>    
+    <execution id="9">      
+      <position height="180" width="7" x="83" y="280"/>    
+    </execution>    
+    <execution id="11">      
+      <position height="99" width="7" x="83" y="334"/>    
+    </execution>  
+  </object>  
+  <object id="16" language="java" name="java.util.concurrent.locks.AbstractQueuedSynchronizer" project="rdltest2" 
+    file="C:/Java/jdk1.8.0_111/jre/lib/rt.jar" binary="true" label="abstractQueuedSynchronizer" type="class" 
+    autoSize="true">    
+    <position height="-1" width="-1" x="715" y="0"/>    
+    <execution id="4">      
+      <position height="27" width="277" x="447" y="125"/>    
+    </execution>    
+    <execution id="8">      
+      <position height="558" width="277" x="447" y="199"/>    
+    </execution>    
+    <execution id="18">      
+      <position height="234" width="7" x="307" y="253"/>    
+    </execution>    
+    <execution id="13">      
+      <position height="27" width="277" x="172" y="351"/>    
+    </execution>    
+    <execution id="15">      
+      <position height="27" width="7" x="310" y="379"/>    
+    </execution>    
+    <execution id="20">      
+      <position height="27" width="7" x="307" y="518"/>    
+    </execution>    
+    <execution id="22">      
+      <position height="163" width="7" x="307" y="567"/>    
+    </execution>    
+    <execution id="25">      
+      <position height="27" width="7" x="310" y="621"/>    
+    </execution>    
+    <execution id="27">      
+      <position height="27" width="7" x="310" y="676"/>    
+    </execution>  
+  </object>  
+  <object id="28" language="java" name="java.util.concurrent.locks.ReentrantLock.Sync" project="rdltest2" 
+    file="C:/Java/jdk1.8.0_111/jre/lib/rt.jar" binary="true" label="sync" type="class" autoSize="true">    
+    <position height="-1" width="-1" x="283" y="0"/>  
+  </object>  
+  <object id="29" language="java" name="java.util.concurrent.locks.AbstractOwnableSynchronizer" project="rdltest2" 
+    file="C:/Java/jdk1.8.0_111/jre/lib/rt.jar" binary="true" label="abstractOwnableSynchronizer" type="class" 
+    autoSize="true">    
+    <position height="-1" width="-1" x="848" y="0"/>    
+    <execution id="6">      
+      <position height="27" width="285" x="728" y="163"/>    
+    </execution>  
+  </object>  
+  <message id="3" operation="compareAndSetState(int,int):boolean" asynchronous="false">    
+    <end type="SOURCE" refId="2"/>    
+    <end type="TARGET" refId="4"/>  
+  </message>  
+  <message id="5" operation="setExclusiveOwnerThread(java.lang.Thread):void" asynchronous="false">    
+    <end type="SOURCE" refId="2"/>    
+    <end type="TARGET" refId="6"/>  
+  </message>  
+  <message id="7" operation="acquire(int):void" asynchronous="false">    
+    <end type="SOURCE" refId="2"/>    
+    <end type="TARGET" refId="8"/>  
+  </message>  
+  <message id="10" operation="nonfairTryAcquire(int):boolean" asynchronous="false">    
+    <end type="SOURCE" refId="9"/>    
+    <end type="TARGET" refId="11"/>  
+  </message>  
+  <message id="12" operation="compareAndSetState(int,int):boolean" asynchronous="false">    
+    <end type="SOURCE" refId="11"/>    
+    <end type="TARGET" refId="13"/>  
+  </message>  
+  <message id="14" operation="setState(int):void" asynchronous="false">    
+    <end type="SOURCE" refId="11"/>    
+    <end type="TARGET" refId="15"/>  
+  </message>  
+  <message id="17" operation="tryAcquire(int):boolean" asynchronous="false">    
+    <end type="SOURCE" refId="8"/>    
+    <end type="TARGET" refId="18"/>  
+  </message>  
+  <message id="19" 
+    operation="addWaiter(java.util.concurrent.locks.AbstractQueuedSynchronizer.Node):java.util.concurrent.locks.AbstractQueuedSynchronizer.Node" 
+    asynchronous="false">    
+    <end type="SOURCE" refId="8"/>    
+    <end type="TARGET" refId="20"/>  
+  </message>  
+  <message id="21" operation="acquireQueued(java.util.concurrent.locks.AbstractQueuedSynchronizer.Node,int):boolean" 
+    asynchronous="false">    
+    <end type="SOURCE" refId="8"/>    
+    <end type="TARGET" refId="22"/>  
+  </message>  
+  <message id="23" asynchronous="false">    
+    <end type="SOURCE" refId="18"/>    
+    <end type="TARGET" refId="9"/>  
+  </message>  
+  <message id="24" 
+    operation="shouldParkAfterFailedAcquire(java.util.concurrent.locks.AbstractQueuedSynchronizer.Node,java.util.concurrent.locks.AbstractQueuedSynchronizer.Node):boolean" 
+    asynchronous="false">    
+    <end type="SOURCE" refId="22"/>    
+    <end type="TARGET" refId="25"/>  
+  </message>  
+  <message id="26" operation="parkAndCheckInterrupt():boolean" asynchronous="false">    
+    <end type="SOURCE" refId="22"/>    
+    <end type="TARGET" refId="27"/>  
+  </message>
+</sequence-diagram>
