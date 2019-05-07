@@ -17,33 +17,51 @@
 package aspect;
 
 
+import org.aopalliance.intercept.MethodInvocation;
+import org.springframework.aop.aspectj.annotation.AnnotationAwareAspectJAutoProxyCreator;
+import org.springframework.aop.interceptor.ExposeInvocationInterceptor;
+import org.springframework.aop.support.AopUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
+import org.springframework.transaction.annotation.EnableTransactionManagement;
 
-import aspect.service.HelloWorldService;
+import aspect.service.IHelloWorldService;
 
 @SpringBootApplication
-@EnableAutoConfiguration(exclude={DataSourceAutoConfiguration.class})
+//@EnableAutoConfiguration(exclude={DataSourceAutoConfiguration.class})
+@EnableAutoConfiguration
+@EnableTransactionManagement
 public class SampleAopApplication implements CommandLineRunner {
 
 	// Simple example shows how an application can spy on itself with AOP
 
 	@Autowired
-	private HelloWorldService helloWorldService;
+	private IHelloWorldService helloWorldService;
 
 	@Override
 	public void run(String... args) {
+	
+//		a.get
 //		System.out.println(this.helloWorldService.getHelloMessage("world"));
 		System.out.println(this.helloWorldService.getHelloMessage());
+		AnnotationAwareAspectJAutoProxyCreator a =null;
+//		a.postProcessAfterInitialization(null,null);
 		
 	}
 
 	public static void main(String[] args) {
 		SpringApplication.run(SampleAopApplication.class, args);
 	}
+
+	public void test() {
+		AnnotationAwareAspectJAutoProxyCreator a =null;
+		a.postProcessAfterInitialization(null,null);
+		ExposeInvocationInterceptor e = null;
+	}
+	
 
 }

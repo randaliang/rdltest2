@@ -10,13 +10,17 @@ import org.aspectj.lang.annotation.*;
 import org.aspectj.lang.reflect.SourceLocation;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.aop.framework.AopContext;
 import org.springframework.core.annotation.Order;
 import org.springframework.stereotype.Component;
 import org.springframework.web.context.request.RequestContextHolder;
 import org.springframework.web.context.request.ServletRequestAttributes;
  
 import javax.servlet.http.HttpServletRequest;
+
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
  
 @Component
 @Aspect
@@ -24,10 +28,10 @@ public class LogAspect {
  
     private static final Logger logger = LoggerFactory.getLogger(LogAspect.class);
     private static final ObjectMapper OBJECT_MAPPER = new ObjectMapper();
-//  private final String POINT_CUT = "execution(public *  aspect.service.*.*(..))";
+  private final String POINT_CUT = "execution(public *  aspect.service.*.*(..))";
     
 //    private final String POINT_CUT = "execution(public *  aspect.service.*.*(..))";
-    private final String POINT_CUT = "execution(public * *(..))";
+//    private final String POINT_CUT = "execution(public * *(..))";
    
     @Pointcut(POINT_CUT)
     public void pointCut(){}
@@ -156,7 +160,9 @@ public class LogAspect {
         } catch (Throwable throwable) {
             throwable.printStackTrace();
         }
-       System.out.println("@Around环绕通知执行结束=====================================");
+       System.out.println("@Around环绕通知执行结束++++++++++++++++++++++++++++++++++++");
         return obj;
     }
+    
+
 }

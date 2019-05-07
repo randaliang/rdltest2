@@ -16,16 +16,29 @@
 
 package aspect.service;
 
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Component;
+import org.springframework.transaction.annotation.Transactional;
 
 @Component
-public class HelloWorldService {
+public class HelloWorldService implements IHelloWorldService {
 
+
+	@Autowired
+	JdbcTemplate jd;
+	
 	@Value("${name:World}")
 	private String name;
 
 	int i = 0;
+	/* (non-Javadoc)
+	 * @see aspect.service.IHelloWorldService#getHelloMessage(java.lang.String)
+	 */
+	@Override
 	public String getHelloMessage( String name ) {
 //		if( "exception".equals(name) ){
 //			throw new RuntimeException("有异常了！！");
@@ -35,8 +48,16 @@ public class HelloWorldService {
 		return s;
 	}
 
+	/* (non-Javadoc)
+	 * @see aspect.service.IHelloWorldService#getHelloMessage()
+	 */
+	@Override
 	@AnnotationTag
+	@Transactional
 	public String getHelloMessage() {
+		
+		List list = jd.queryForList("	SELECT * FROM role WHERE id IN(1) ");
+		list.size();
 		if( "exception".equals(name) ){
 			throw new RuntimeException("有异常了！！");
 		}
