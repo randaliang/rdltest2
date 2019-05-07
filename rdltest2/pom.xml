@@ -131,6 +131,13 @@
 			<version>1.8.9</version>
 		</dependency>
 		<!-- cglib -->
+<!-- https://mvnrepository.com/artifact/cglib/cglib -->
+	<dependency>
+	    <groupId>cglib</groupId>
+	    <artifactId>cglib</artifactId>
+	    <version>3.2.9</version>
+	</dependency>
+	
 
 		<dependency> 
 			<groupId>com.google.guava</groupId>
