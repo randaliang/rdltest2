@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sequence-diagram version="1.2.3" icons="true" generate-combined-fragments="true">  
+  <object id="1" language="java" name="org.springframework.aop.framework.autoproxy.AbstractAutoProxyCreator" 
+    project="rdltest2" file="D:/repository/org/springframework/spring-aop/5.1.3.RELEASE/spring-aop-5.1.3.RELEASE.jar" 
+    binary="true" label="abstractAutoProxyCreator" type="class" autoSize="true">    
+    <position height="-1" width="-1" x="255" y="0"/>    
+    <execution id="2">      
+      <position height="335" width="299" x="5" y="99"/>    
+    </execution>    
+    <execution id="4">      
+      <position height="254" width="299" x="5" y="153"/>    
+    </execution>  
+  </object>  
+  <object id="7" language="java" name="org.springframework.aop.framework.ProxyFactory" project="rdltest2" 
+    file="D:/repository/org/springframework/spring-aop/5.1.3.RELEASE/spring-aop-5.1.3.RELEASE.jar" binary="true" 
+    label="proxyFactory" type="class" autoSize="true">    
+    <position height="-1" width="-1" x="332" y="0"/>    
+    <execution id="6">      
+      <position height="200" width="233" x="308" y="180"/>    
+    </execution>  
+  </object>  
+  <object id="10" language="java" name="org.springframework.aop.framework.ProxyCreatorSupport" project="rdltest2" 
+    file="D:/repository/org/springframework/spring-aop/5.1.3.RELEASE/spring-aop-5.1.3.RELEASE.jar" binary="true" 
+    label="proxyCreatorSupport" type="class" autoSize="true">    
+    <position height="-1" width="-1" x="526" y="0"/>    
+    <execution id="9">      
+      <position height="146" width="233" x="545" y="207"/>    
+    </execution>    
+    <execution id="12">      
+      <position height="27" width="7" x="658" y="261"/>    
+    </execution>  
+  </object>  
+  <object id="15" language="java" name="org.springframework.aop.framework.DefaultAopProxyFactory" project="rdltest2" 
+    file="D:/repository/org/springframework/spring-aop/5.1.3.RELEASE/spring-aop-5.1.3.RELEASE.jar" binary="true" 
+    label="defaultAopProxyFactory" type="class" autoSize="true">    
+    <position height="-1" width="-1" x="768" y="0"/>    
+    <execution id="14">      
+      <position height="27" width="238" x="782" y="299"/>    
+    </execution>  
+  </object>  
+  <message id="3" 
+    operation="createProxy(java.lang.Class&lt;?&gt;,java.lang.String,java.lang.Object[],org.springframework.aop.TargetSource):java.lang.Object" 
+    asynchronous="false">    
+    <end type="SOURCE" refId="2"/>    
+    <end type="TARGET" refId="4"/>  
+  </message>  
+  <message id="5" operation="getProxy(java.lang.ClassLoader):java.lang.Object" asynchronous="false">    
+    <end type="SOURCE" refId="4"/>    
+    <end type="TARGET" refId="6"/>  
+  </message>  
+  <message id="8" operation="createAopProxy():org.springframework.aop.framework.AopProxy" asynchronous="false">    
+    <end type="SOURCE" refId="6"/>    
+    <end type="TARGET" refId="9"/>  
+  </message>  
+  <message id="11" operation="getAopProxyFactory():org.springframework.aop.framework.AopProxyFactory" 
+    asynchronous="false">    
+    <end type="SOURCE" refId="9"/>    
+    <end type="TARGET" refId="12"/>  
+  </message>  
+  <message id="13" 
+    operation="createAopProxy(org.springframework.aop.framework.AdvisedSupport):org.springframework.aop.framework.AopProxy" 
+    asynchronous="false">    
+    <end type="SOURCE" refId="9"/>    
+    <end type="TARGET" refId="14"/>  
+  </message>
+</sequence-diagram>

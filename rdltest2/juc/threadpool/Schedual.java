@@ -55,7 +55,6 @@ public class Schedual {
 					return t+"";
 				}
 			};
-			s.
 			s.submit(r);
 		}
 		
@@ -106,5 +105,11 @@ public static void main( String a) {
 	public void lock() {
 		ReentrantLock r = new ReentrantLock();
 		r.lock();
+		
+		String s = "001";
+		if( s.compareTo("001")>=0 ) {
+			
+		}
+		
 	}
 }

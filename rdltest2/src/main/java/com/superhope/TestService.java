@@ -9,6 +9,8 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.UnsupportedEncodingException;
 import java.util.List;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
 
 import org.springframework.aop.framework.AopContext;
 import org.springframework.beans.BeansException;
@@ -70,8 +72,8 @@ public class TestService implements InitializingBean, ApplicationContextAware {
 //		System.out.println( list.size() );
 //		dao.all();
 //		insertTable( new File("d:\\temp\\20190423\\pb_plan_agent_note.sql") );
-		insertTable(new File("d:\\temp\\20190423\\pb_pay_voucher.sql"));
-
+//		insertTable(new File("d:\\temp\\20190423\\pb_pay_voucher.sql"));
+//		System.in.read();
 	}
 
 	public void insertTable(File file) {
@@ -99,7 +101,7 @@ public class TestService implements InitializingBean, ApplicationContextAware {
 					s = content.substring(0, end);
 //					System.out.println(s);
 					try {
-						jd.execute(s);
+						execute(s);
 						i++;
 						if(i%100 == 0) {
 							System.out.println(i);
@@ -119,6 +121,19 @@ public class TestService implements InitializingBean, ApplicationContextAware {
 		System.out.println("end----" + file.getName());
 	}
 
+	ExecutorService es = Executors.newFixedThreadPool(10);
+	public void execute(final String s ) {
+		es.submit(new Runnable() {
+			
+			@Override
+			public void run() {
+				TestService.this.jd.execute(s);
+				
+			}
+		});
+	}
+	
+	
 	public static byte[] convertFileToBytes(File file) {
 		FileInputStream inputStream = null;
 		ByteArrayOutputStream out = null;
@@ -159,5 +174,8 @@ public class TestService implements InitializingBean, ApplicationContextAware {
 		}
 
 	}
+	
+	
+	
 
 }

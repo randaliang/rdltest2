@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sequence-diagram version="1.2.3" icons="true" generate-combined-fragments="true">  
+  <object id="1" language="java" name="org.springframework.aop.framework.AopProxyUtils" project="rdltest2" 
+    file="D:/repository/org/springframework/spring-aop/5.1.3.RELEASE/spring-aop-5.1.3.RELEASE.jar" binary="true" 
+    label="aopProxyUtils" type="class" autoSize="true">    
+    <position height="-1" width="-1" x="276" y="0"/>    
+    <execution id="2">      
+      <position height="108" width="233" x="5" y="98"/>    
+    </execution>    
+    <execution id="4">      
+      <position height="27" width="233" x="5" y="152"/>    
+    </execution>  
+  </object>  
+  <message id="3" 
+    operation="completeProxiedInterfaces(org.springframework.aop.framework.AdvisedSupport,boolean):java.lang.Class&lt;?&gt;[]" 
+    asynchronous="false">    
+    <end type="SOURCE" refId="2"/>    
+    <end type="TARGET" refId="4"/>  
+  </message>
+</sequence-diagram>
