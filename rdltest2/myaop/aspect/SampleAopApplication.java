@@ -44,13 +44,10 @@ public class SampleAopApplication implements CommandLineRunner {
 
 	@Override
 	public void run(String... args) {
-	
-//		a.get
 //		System.out.println(this.helloWorldService.getHelloMessage("world"));
 		System.out.println(this.helloWorldService.getHelloMessage());
 		AnnotationAwareAspectJAutoProxyCreator a =null;
 //		a.postProcessAfterInitialization(null,null);
-		
 	}
 
 	public static void main(String[] args) {

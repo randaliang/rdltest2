@@ -34,9 +34,9 @@ import com.superhope.dao.UserDao;
 import com.superhope.dao.pojo.User;
 
 import lombok.extern.slf4j.Slf4j;
+
+
 @Slf4j
-@RunWith(SpringJUnit4ClassRunner.class)
-@SpringBootTest(classes = { DemoforbeetlsqlApplication.class })
 public class Demos2 {
 
 	private static SQLManager sqlManager;
@@ -47,7 +47,6 @@ public class Demos2 {
 	@BeforeClass
 	public static void setUpBeforeClass() throws Exception {
 		log.info("setUpBeforeClass");
-		
 		String driver = "com.mysql.cj.jdbc.Driver";
 		String url = "jdbc:mysql://192.168.65.166:3306/rdl_test0?useUnicode=true&characterEncoding=utf8&useSSL=false";
 		String userName = "root";

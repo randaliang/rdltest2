@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sequence-diagram version="1.2.3" icons="true" generate-combined-fragments="true">  
+  <object id="1" language="java" name="org.springframework.transaction.interceptor.TransactionInterceptor" 
+    project="rdltest2" file="D:/repository/org/springframework/spring-tx/5.1.4.RELEASE/spring-tx-5.1.4.RELEASE.jar" 
+    binary="true" label="transactionInterceptor" type="class" autoSize="true">    
+    <position height="-1" width="-1" x="102" y="0"/>    
+    <execution id="2">      
+      <position height="162" width="282" x="5" y="98"/>    
+    </execution>    
+    <execution id="4">      
+      <position height="81" width="282" x="5" y="152"/>    
+    </execution>  
+  </object>  
+  <object id="7" language="java" name="org.springframework.transaction.interceptor.TransactionAspectSupport" 
+    project="rdltest2" file="D:/repository/org/springframework/spring-tx/5.1.4.RELEASE/spring-tx-5.1.4.RELEASE.jar" 
+    binary="true" label="transactionAspectSupport" type="class" autoSize="true">    
+    <position height="-1" width="-1" x="482" y="0"/>    
+    <execution id="6">      
+      <position height="27" width="282" x="291" y="179"/>    
+    </execution>  
+  </object>  
+  <message id="3" operation="invoke(org.aopalliance.intercept.MethodInvocation):java.lang.Object" asynchronous="false">    
+    <end type="SOURCE" refId="2"/>    
+    <end type="TARGET" refId="4"/>  
+  </message>  
+  <message id="5" 
+    operation="invokeWithinTransaction(java.lang.reflect.Method,java.lang.Class&lt;?&gt;,org.springframework.transaction.interceptor.TransactionAspectSupport.InvocationCallback):java.lang.Object" 
+    asynchronous="false">    
+    <end type="SOURCE" refId="4"/>    
+    <end type="TARGET" refId="6"/>  
+  </message>
+</sequence-diagram>
