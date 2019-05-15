@@ -1,22 +1,51 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <sequence-diagram version="1.2.3" icons="true" generate-combined-fragments="true">  
   <object id="1" language="java" name="org.springframework.transaction.interceptor.TransactionInterceptor" 
-    project="rdltest2" file="D:/repository/org/springframework/spring-tx/5.1.4.RELEASE/spring-tx-5.1.4.RELEASE.jar" 
+    project="rdltest2" file="D:/repository/org/springframework/spring-tx/5.0.9.RELEASE/spring-tx-5.0.9.RELEASE.jar" 
     binary="true" label="transactionInterceptor" type="class" autoSize="true">    
     <position height="-1" width="-1" x="102" y="0"/>    
     <execution id="2">      
-      <position height="162" width="282" x="5" y="98"/>    
+      <position height="526" width="282" x="5" y="98"/>    
     </execution>    
     <execution id="4">      
-      <position height="81" width="282" x="5" y="152"/>    
+      <position height="445" width="282" x="5" y="152"/>    
+    </execution>    
+    <execution id="8">      
+      <position height="143" width="7" x="146" y="235"/>    
+    </execution>    
+    <execution id="12">      
+      <position height="27" width="7" x="146" y="466"/>    
+    </execution>    
+    <execution id="14">      
+      <position height="27" width="7" x="146" y="543"/>    
+    </execution>    
+    <execution id="18">      
+      <position height="27" width="7" x="149" y="324"/>    
     </execution>  
   </object>  
-  <object id="7" language="java" name="org.springframework.transaction.interceptor.TransactionAspectSupport" 
-    project="rdltest2" file="D:/repository/org/springframework/spring-tx/5.1.4.RELEASE/spring-tx-5.1.4.RELEASE.jar" 
+  <object id="19" language="java" name="org.springframework.jdbc.datasource.DataSourceTransactionManager" 
+    project="rdltest2" file="D:/repository/org/springframework/spring-jdbc/5.0.9.RELEASE/spring-jdbc-5.0.9.RELEASE.jar" 
+    binary="true" label="dataSourceTransactionManager" type="class" autoSize="true">    
+    <position height="-1" width="-1" x="368" y="0"/>    
+    <execution id="16">      
+      <position height="27" width="300" x="577" y="262"/>    
+    </execution>  
+  </object>  
+  <object id="20" language="java" name="org.springframework.transaction.interceptor.TransactionAspectSupport" 
+    project="rdltest2" file="D:/repository/org/springframework/spring-tx/5.0.9.RELEASE/spring-tx-5.0.9.RELEASE.jar" 
     binary="true" label="transactionAspectSupport" type="class" autoSize="true">    
     <position height="-1" width="-1" x="482" y="0"/>    
     <execution id="6">      
       <position height="27" width="282" x="291" y="179"/>    
+    </execution>  
+  </object>  
+  <object id="21" language="java" 
+    name="org.springframework.transaction.interceptor.TransactionAspectSupport.InvocationCallback" project="rdltest2" 
+    file="D:/repository/org/springframework/spring-tx/5.0.9.RELEASE/spring-tx-5.0.9.RELEASE.jar" binary="true" 
+    label="invocationCallback" type="interface" autoSize="true">    
+    <position height="-1" width="-1" x="132" y="0"/>    
+    <execution id="10">      
+      <position height="27" width="282" x="881" y="377"/>    
     </execution>  
   </object>  
   <message id="3" operation="invoke(org.aopalliance.intercept.MethodInvocation):java.lang.Object" asynchronous="false">    
@@ -28,5 +57,39 @@
     asynchronous="false">    
     <end type="SOURCE" refId="4"/>    
     <end type="TARGET" refId="6"/>  
+  </message>  
+  <message id="7" 
+    operation="createTransactionIfNecessary(org.springframework.transaction.PlatformTransactionManager,org.springframework.transaction.interceptor.TransactionAttribute,java.lang.String):org.springframework.transaction.interceptor.TransactionAspectSupport.TransactionInfo" 
+    asynchronous="false">    
+    <end type="SOURCE" refId="4"/>    
+    <end type="TARGET" refId="8"/>  
+  </message>  
+  <message id="9" asynchronous="false">    
+    <end type="SOURCE" refId="4"/>    
+    <end type="TARGET" refId="10"/>  
+  </message>  
+  <message id="11" 
+    operation="cleanupTransactionInfo(org.springframework.transaction.interceptor.TransactionAspectSupport.TransactionInfo):void" 
+    asynchronous="false">    
+    <end type="SOURCE" refId="4"/>    
+    <end type="TARGET" refId="12"/>  
+  </message>  
+  <message id="13" 
+    operation="commitTransactionAfterReturning(org.springframework.transaction.interceptor.TransactionAspectSupport.TransactionInfo):void" 
+    asynchronous="false">    
+    <end type="SOURCE" refId="4"/>    
+    <end type="TARGET" refId="14"/>  
+  </message>  
+  <message id="15" 
+    operation="getTransaction(org.springframework.transaction.TransactionDefinition):org.springframework.transaction.TransactionStatus" 
+    asynchronous="false">    
+    <end type="SOURCE" refId="8"/>    
+    <end type="TARGET" refId="16"/>  
+  </message>  
+  <message id="17" 
+    operation="prepareTransactionInfo(org.springframework.transaction.PlatformTransactionManager,org.springframework.transaction.interceptor.TransactionAttribute,java.lang.String,org.springframework.transaction.TransactionStatus):org.springframework.transaction.interceptor.TransactionAspectSupport.TransactionInfo" 
+    asynchronous="false">    
+    <end type="SOURCE" refId="8"/>    
+    <end type="TARGET" refId="18"/>  
   </message>
 </sequence-diagram>
