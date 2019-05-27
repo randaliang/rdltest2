@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sequence-diagram version="1.2.3" icons="true" generate-combined-fragments="true">  
+  <object id="1" language="java" name="org.springframework.web.servlet.DispatcherServlet" 
+    project="org.springframework_spring-webmvc_5.0.10.RELEASE" 
+    file="D:/repository/org/springframework/spring-webmvc/5.0.10.RELEASE/spring-webmvc-5.0.10.RELEASE.jar" binary="true" 
+    label="dispatcherServlet" type="class" autoSize="true">    
+    <position height="-1" width="-1" x="120" y="0"/>    
+    <execution id="2">      
+      <position height="513" width="211" x="5" y="98"/>    
+    </execution>    
+    <execution id="4">      
+      <position height="432" width="211" x="5" y="152"/>    
+    </execution>    
+    <execution id="6">      
+      <position height="351" width="7" x="107" y="206"/>    
+    </execution>    
+    <execution id="8">      
+      <position height="270" width="7" x="110" y="260"/>    
+    </execution>  
+  </object>  
+  <object id="11" language="java" 
+    name="org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping" 
+    project="org.springframework_spring-webmvc_5.0.10.RELEASE" 
+    file="D:/repository/org/springframework/spring-webmvc/5.0.10.RELEASE/spring-webmvc-5.0.10.RELEASE.jar" binary="true" 
+    label="requestMappingHandlerMapping" type="class" autoSize="true">    
+    <position height="-1" width="-1" x="98" y="0"/>    
+    <execution id="10">      
+      <position height="216" width="362" x="220" y="287"/>    
+    </execution>  
+  </object>  
+  <object id="14" language="java" name="org.springframework.web.servlet.handler.AbstractHandlerMapping" 
+    project="org.springframework_spring-webmvc_5.0.10.RELEASE" 
+    file="D:/repository/org/springframework/spring-webmvc/5.0.10.RELEASE/spring-webmvc-5.0.10.RELEASE.jar" binary="true" 
+    label="abstractHandlerMapping" type="class" autoSize="true">    
+    <position height="-1" width="-1" x="725" y="0"/>    
+    <execution id="13">      
+      <position height="162" width="263" x="586" y="314"/>    
+    </execution>  
+  </object>  
+  <object id="17" language="java" name="org.springframework.web.servlet.handler.AbstractHandlerMethodMapping" 
+    project="org.springframework_spring-webmvc_5.0.10.RELEASE" 
+    file="D:/repository/org/springframework/spring-webmvc/5.0.10.RELEASE/spring-webmvc-5.0.10.RELEASE.jar" binary="true" 
+    label="abstractHandlerMethodMapping" type="class" autoSize="true">    
+    <position height="-1" width="-1" x="774" y="0"/>    
+    <execution id="16">      
+      <position height="108" width="334" x="853" y="341"/>    
+    </execution>    
+    <execution id="19">      
+      <position height="27" width="334" x="853" y="395"/>    
+    </execution>  
+  </object>  
+  <object id="20" language="java" name="org.springframework.web.servlet.mvc.method.RequestMappingInfoHandlerMapping" 
+    project="org.springframework_spring-webmvc_5.0.10.RELEASE" 
+    file="D:/repository/org/springframework/spring-webmvc/5.0.10.RELEASE/spring-webmvc-5.0.10.RELEASE.jar" binary="true" 
+    label="requestMappingInfoHandlerMapping" type="class" autoSize="true">    
+    <position height="-1" width="-1" x="585" y="0"/>  
+  </object>  
+  <message id="3" 
+    operation="doService(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse):void" 
+    asynchronous="false">    
+    <end type="SOURCE" refId="2"/>    
+    <end type="TARGET" refId="4"/>  
+  </message>  
+  <message id="5" 
+    operation="doDispatch(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse):void" 
+    asynchronous="false">    
+    <end type="SOURCE" refId="4"/>    
+    <end type="TARGET" refId="6"/>  
+  </message>  
+  <message id="7" 
+    operation="getHandler(javax.servlet.http.HttpServletRequest):org.springframework.web.servlet.HandlerExecutionChain" 
+    asynchronous="false">    
+    <end type="SOURCE" refId="6"/>    
+    <end type="TARGET" refId="8"/>  
+  </message>  
+  <message id="9" 
+    operation="getHandler(javax.servlet.http.HttpServletRequest):org.springframework.web.servlet.HandlerExecutionChain" 
+    asynchronous="false">    
+    <end type="SOURCE" refId="8"/>    
+    <end type="TARGET" refId="10"/>  
+  </message>  
+  <message id="12" 
+    operation="getHandler(javax.servlet.http.HttpServletRequest):org.springframework.web.servlet.HandlerExecutionChain" 
+    asynchronous="false">    
+    <end type="SOURCE" refId="10"/>    
+    <end type="TARGET" refId="13"/>  
+  </message>  
+  <message id="15" 
+    operation="getHandlerInternal(javax.servlet.http.HttpServletRequest):org.springframework.web.method.HandlerMethod" 
+    asynchronous="false">    
+    <end type="SOURCE" refId="13"/>    
+    <end type="TARGET" refId="16"/>  
+  </message>  
+  <message id="18" 
+    operation="lookupHandlerMethod(java.lang.String,javax.servlet.http.HttpServletRequest):org.springframework.web.method.HandlerMethod" 
+    asynchronous="false">    
+    <end type="SOURCE" refId="16"/>    
+    <end type="TARGET" refId="19"/>  
+  </message>
+</sequence-diagram>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sequence-diagram version="1.2.3" icons="true" generate-combined-fragments="true">  
+  <object id="1" language="java" name="org.springframework.boot.autoconfigure.web.servlet.WebMvcAutoConfiguration" 
+    project="rdltest2" 
+    file="D:/repository/org/springframework/boot/spring-boot-autoconfigure/2.0.6.RELEASE/spring-boot-autoconfigure-2.0.6.RELEASE.jar" 
+    binary="true" label="webMvcAutoConfiguration" type="class" autoSize="true">    
+    <position height="-1" width="-1" x="131" y="0"/>    
+    <execution id="2">      
+      <position height="108" width="334" x="5" y="98"/>    
+    </execution>    
+    <execution id="4">      
+      <position height="27" width="334" x="5" y="152"/>    
+    </execution>    
+    <execution id="5">      
+      <position height="108" width="334" x="5" y="218"/>    
+    </execution>    
+    <execution id="7">      
+      <position height="27" width="334" x="5" y="272"/>    
+    </execution>  
+  </object>  
+  <object id="8" language="java" 
+    name="org.springframework.boot.autoconfigure.web.servlet.WebMvcAutoConfiguration.EnableWebMvcConfiguration" 
+    project="rdltest2" 
+    file="D:/repository/org/springframework/boot/spring-boot-autoconfigure/2.0.6.RELEASE/spring-boot-autoconfigure-2.0.6.RELEASE.jar" 
+    binary="true" label="enableWebMvcConfiguration" type="class" autoSize="true">    
+    <position height="-1" width="-1" x="205" y="0"/>  
+  </object>  
+  <object id="9" language="java" 
+    name="org.springframework.boot.autoconfigure.web.servlet.WebMvcAutoConfiguration.WebMvcAutoConfigurationAdapter" 
+    project="rdltest2" 
+    file="D:/repository/org/springframework/boot/spring-boot-autoconfigure/2.0.6.RELEASE/spring-boot-autoconfigure-2.0.6.RELEASE.jar" 
+    binary="true" label="webMvcAutoConfigurationAdapter" type="class" autoSize="true">    
+    <position height="-1" width="-1" x="-523" y="0"/>  
+  </object>  
+  <message id="3" 
+    operation="hiddenHttpMethodFilter():org.springframework.boot.web.servlet.filter.OrderedHiddenHttpMethodFilter" 
+    asynchronous="false">    
+    <end type="SOURCE" refId="2"/>    
+    <end type="TARGET" refId="4"/>  
+  </message>  
+  <message id="6" 
+    operation="httpPutFormContentFilter():org.springframework.boot.web.servlet.filter.OrderedHttpPutFormContentFilter" 
+    asynchronous="false">    
+    <end type="SOURCE" refId="5"/>    
+    <end type="TARGET" refId="7"/>  
+  </message>
+</sequence-diagram>

@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sequence-diagram version="1.2.3" icons="true" generate-combined-fragments="true">  
+  <object id="1" language="java" name="org.springframework.web.servlet.DispatcherServlet" project="rdltest2" 
+    file="D:/repository/org/springframework/spring-webmvc/5.0.9.RELEASE/spring-webmvc-5.0.9.RELEASE.jar" binary="true" 
+    label="dispatcherServlet" type="class" autoSize="true">    
+    <position height="-1" width="-1" x="133" y="0"/>    
+    <execution id="2">      
+      <position height="979" width="211" x="5" y="98"/>    
+    </execution>    
+    <execution id="4">      
+      <position height="898" width="211" x="5" y="152"/>    
+    </execution>    
+    <execution id="6">      
+      <position height="813" width="7" x="107" y="210"/>    
+    </execution>    
+    <execution id="8">      
+      <position height="725" width="7" x="113" y="271"/>    
+    </execution>    
+    <execution id="10">      
+      <position height="644" width="7" x="113" y="325"/>    
+    </execution>    
+    <execution id="12">      
+      <position height="563" width="7" x="116" y="379"/>    
+    </execution>    
+    <execution id="14">      
+      <position height="27" width="7" x="119" y="433"/>    
+    </execution>    
+    <execution id="16">      
+      <position height="27" width="7" x="119" y="483"/>    
+    </execution>    
+    <execution id="18">      
+      <position height="27" width="7" x="122" y="536"/>    
+    </execution>    
+    <execution id="20">      
+      <position height="27" width="7" x="122" y="589"/>    
+    </execution>    
+    <execution id="22">      
+      <position height="27" width="7" x="122" y="641"/>    
+    </execution>    
+    <execution id="24">      
+      <position height="27" width="7" x="119" y="708"/>    
+    </execution>    
+    <execution id="26">      
+      <position height="27" width="7" x="122" y="770"/>    
+    </execution>    
+    <execution id="28">      
+      <position height="27" width="7" x="122" y="828"/>    
+    </execution>    
+    <execution id="30">      
+      <position height="27" width="7" x="122" y="888"/>    
+    </execution>  
+  </object>  
+  <message id="3" operation="init():void" asynchronous="false">    
+    <end type="SOURCE" refId="2"/>    
+    <end type="TARGET" refId="4"/>  
+  </message>  
+  <message id="5" operation="initServletBean():void" asynchronous="false">    
+    <end type="SOURCE" refId="4"/>    
+    <end type="TARGET" refId="6"/>  
+  </message>  
+  <message id="7" operation="initWebApplicationContext():org.springframework.web.context.WebApplicationContext" 
+    asynchronous="false">    
+    <end type="SOURCE" refId="6"/>    
+    <end type="TARGET" refId="8"/>  
+  </message>  
+  <message id="9" operation="onRefresh(org.springframework.context.ApplicationContext):void" asynchronous="false">    
+    <end type="SOURCE" refId="8"/>    
+    <end type="TARGET" refId="10"/>  
+  </message>  
+  <message id="11" operation="initStrategies(org.springframework.context.ApplicationContext):void" asynchronous="false">    
+    <end type="SOURCE" refId="10"/>    
+    <end type="TARGET" refId="12"/>  
+  </message>  
+  <message id="13" operation="initMultipartResolver(org.springframework.context.ApplicationContext):void" 
+    asynchronous="false">    
+    <end type="SOURCE" refId="12"/>    
+    <end type="TARGET" refId="14"/>  
+  </message>  
+  <message id="15" operation="initLocaleResolver(org.springframework.context.ApplicationContext):void" 
+    asynchronous="false">    
+    <end type="SOURCE" refId="12"/>    
+    <end type="TARGET" refId="16"/>  
+  </message>  
+  <message id="17" operation="initThemeResolver(org.springframework.context.ApplicationContext):void" 
+    asynchronous="false">    
+    <end type="SOURCE" refId="12"/>    
+    <end type="TARGET" refId="18"/>  
+  </message>  
+  <message id="19" operation="initHandlerMappings(org.springframework.context.ApplicationContext):void" 
+    asynchronous="false">    
+    <end type="SOURCE" refId="12"/>    
+    <end type="TARGET" refId="20"/>  
+  </message>  
+  <message id="21" operation="initHandlerAdapters(org.springframework.context.ApplicationContext):void" 
+    asynchronous="false">    
+    <end type="SOURCE" refId="12"/>    
+    <end type="TARGET" refId="22"/>  
+  </message>  
+  <message id="23" operation="initHandlerExceptionResolvers(org.springframework.context.ApplicationContext):void" 
+    asynchronous="false">    
+    <end type="SOURCE" refId="12"/>    
+    <end type="TARGET" refId="24"/>  
+  </message>  
+  <message id="25" operation="initRequestToViewNameTranslator(org.springframework.context.ApplicationContext):void" 
+    asynchronous="false">    
+    <end type="SOURCE" refId="12"/>    
+    <end type="TARGET" refId="26"/>  
+  </message>  
+  <message id="27" operation="initViewResolvers(org.springframework.context.ApplicationContext):void" 
+    asynchronous="false">    
+    <end type="SOURCE" refId="12"/>    
+    <end type="TARGET" refId="28"/>  
+  </message>  
+  <message id="29" operation="initFlashMapManager(org.springframework.context.ApplicationContext):void" 
+    asynchronous="false">    
+    <end type="SOURCE" refId="12"/>    
+    <end type="TARGET" refId="30"/>  
+  </message>
+</sequence-diagram>
