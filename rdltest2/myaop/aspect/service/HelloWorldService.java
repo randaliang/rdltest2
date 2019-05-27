@@ -27,7 +27,9 @@ import org.springframework.transaction.annotation.Transactional;
 @Component
 public class HelloWorldService implements IHelloWorldService {
 
-
+	@Autowired
+	HelloNewService hns;
+	
 	@Autowired
 	JdbcTemplate jd;
 	
@@ -64,7 +66,8 @@ public class HelloWorldService implements IHelloWorldService {
 		i++;
 		String s =  "Hello " + name + "test!" + i;
 //		return "Hello " + name + "test!";
-		System.out.println("=============================invoke" + s );
+		System.out.println("=============================invoke" + hns.getHelloMessage() );
+		
 		return s ;
 	}
 }

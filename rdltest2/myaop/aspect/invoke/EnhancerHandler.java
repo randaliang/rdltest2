@@ -2,6 +2,8 @@ package aspect.invoke;
 
 import java.lang.reflect.Method;
 
+import org.springframework.aop.aspectj.autoproxy.AspectJAwareAdvisorAutoProxyCreator;
+
 import net.sf.cglib.proxy.Enhancer;
 import net.sf.cglib.proxy.MethodInterceptor;
 import net.sf.cglib.proxy.MethodProxy;
@@ -12,6 +14,7 @@ public class EnhancerHandler implements MethodInterceptor {
 	private Object obj;
 	
 	public Object createProxy(Object target) {
+		
 		this.obj = target;
 		Enhancer enhancer = new Enhancer();
 		//设置代理目标

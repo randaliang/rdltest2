@@ -25,4 +25,10 @@ public class LogController {
     return "shutdown";
   }
 
+  @GetMapping(value = "/msg")
+  public String getMessage() {
+//	hello.getHelloMessage();
+    return "msg";
+  }
+
 }

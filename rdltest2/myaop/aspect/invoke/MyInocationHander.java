@@ -21,6 +21,8 @@ public class MyInocationHander<T> implements InvocationHandler{
 
 	public static void main( String args[] ) {
 		InovkeServce is = new InovkeServiceImpl();
+//		is.print("aaa");
+//		is.encode("test");
 		InovkeServce proxy = (InovkeServce)Proxy.newProxyInstance(MyInocationHander.class.getClassLoader(), 
 				new Class[] {InovkeServce.class} , new MyInocationHander( is));
 		proxy.print("aaa");

@@ -28,6 +28,7 @@ import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
+import org.springframework.web.servlet.DispatcherServlet;
 
 import aspect.service.IHelloWorldService;
 
@@ -50,7 +51,8 @@ public class SampleAopApplication implements CommandLineRunner {
 //		a.postProcessAfterInitialization(null,null);
 	}
 
-	public static void main(String[] args) {
+	public static void main(String ... args) {
+		System.out.println("===========");
 		SpringApplication.run(SampleAopApplication.class, args);
 	}
 
@@ -58,6 +60,7 @@ public class SampleAopApplication implements CommandLineRunner {
 		AnnotationAwareAspectJAutoProxyCreator a =null;
 		a.postProcessAfterInitialization(null,null);
 		ExposeInvocationInterceptor e = null;
+		DispatcherServlet d = null;
 	}
 	
 
