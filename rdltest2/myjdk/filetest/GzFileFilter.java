@@ -4,7 +4,7 @@ import java.io.File;
 import java.util.HashSet;
 import java.util.Set;
 
-public class FileFilter {
+public class GzFileFilter {
 
 	
 	public static Set<String> getClassFileNames( File dir ){
