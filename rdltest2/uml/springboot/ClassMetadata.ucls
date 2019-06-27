@@ -4,7 +4,7 @@
   <interface id="1" language="java" name="org.springframework.core.type.ClassMetadata" project="rdltest2" 
     file="D:/repository/org/springframework/spring-core/5.0.10.RELEASE/spring-core-5.0.10.RELEASE.jar" binary="true" 
     corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="352" y="20"/>    
+    <position height="-1" width="-1" x="359" y="-46"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
