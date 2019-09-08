@@ -24,11 +24,16 @@ import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.Transactional;
 
+import aspect.config.People;
+
 @Component
 public class HelloWorldService implements IHelloWorldService {
 
 	@Autowired
 	HelloNewService hns;
+	
+	 @Autowired
+	 private People people;
 	
 	@Autowired
 	JdbcTemplate jd;
@@ -45,7 +50,7 @@ public class HelloWorldService implements IHelloWorldService {
 //		if( "exception".equals(name) ){
 //			throw new RuntimeException("有异常了！！");
 //		}
-		String s =  "Hello " + name + "test!" + (i++);
+		String s =  "Hello " + name + "test!" + (i++) +people.getName() + ":"  +people.getAge();
 		System.out.println("invoke" + s );
 		return s;
 	}

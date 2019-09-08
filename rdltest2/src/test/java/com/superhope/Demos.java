@@ -19,6 +19,7 @@ import org.beetl.sql.core.db.DBStyle;
 import org.beetl.sql.core.db.MySqlStyle;
 import org.beetl.sql.core.engine.PageQuery;
 import org.beetl.sql.core.query.Query;
+import org.beetl.sql.core.query.QueryCondition;
 import org.beetl.sql.ext.DebugInterceptor;
 import org.junit.After;
 import org.junit.AfterClass;
@@ -63,7 +64,7 @@ public class Demos {
 //		sqlManager = new SQLManager(mysql,loader,source,new UnderlinedNameConversion(), new Interceptor[]{new DebugInterceptor()});
 	}
 	
-	@Test
+//	@Test
 	public void insert(){
 		User user = new User();
 		user.setAge(19);
@@ -80,7 +81,7 @@ public class Demos {
 	
 	
 	
-	@Test
+//	@Test
 	public void tesExetendtQuery(){
 		int id = 1;
 		UserExtend user = sqlManager.unique(UserExtend.class,id);
@@ -88,7 +89,7 @@ public class Demos {
 	}
 	
 	
-	@Test
+//	@Test
 	public void updateTemplateById(){
 		User newUser = new User();
 		newUser.setId(1);
@@ -97,7 +98,7 @@ public class Demos {
 		sqlManager.updateTemplateById(newUser);
 	}
 	
-	@Test
+//	@Test
 	public void queryTemplate(){
 		//模板查询
 		User query = new User();
@@ -106,35 +107,35 @@ public class Demos {
 		log.info("list.size@@@@@@@@@@@" + list.size() );
 	}
 	
-	@Test
+//	@Test
 	public void lambdaQuery(){
 		//Query查询
 		List<User> userList = sqlManager.lambdaQuery(User.class).andEq(User::getName,"xiandafu").select();
 		log.info("list.size====================" + userList.size() );
 	}
 	
-	@Test
+//	@Test
 	public void singleTest(){
 		User user = sqlManager.unique(User.class, 1);
 		log.info("1111111111-----------" + user );
 	}
 
 	
-	@Test
+//	@Test
 	public void allTest(){
 		List<User> userList = sqlManager.all(User.class, 5, 100);
 		log.info("userList-----------" + userList.size() );
 	}
 
 	
-	@Test
+//	@Test
 	public void queryTest(){
 		List<User> list = sqlManager.lambdaQuery(User.class).andEq(User::getName, "hi").orderBy(User::getCreateDate).select();
 		log.info( "queryTest" + list.size() );
 	}
 
 	
-	@Test
+//	@Test
 	public void templateQueryTest(){
 		User user = new User();
 		user.setAge(19);
@@ -146,7 +147,7 @@ public class Demos {
 
 	
 	
-	@Test
+//	@Test
 	public void templateMinMaxQueryTest(){
 		User user = new User();
 		user.setAge(19);
@@ -157,7 +158,7 @@ public class Demos {
 		log.info( "templateQueryTest" + list.size() );
 	}
 
-	@Test
+//	@Test
 	public void sqlIdTest(){
 		Map<String, String> map = new HashMap<String, String>();
 		map.put("name","xiandafu");
@@ -165,7 +166,7 @@ public class Demos {
 		log.info( "templateQueryTest" + list.size() );
 	}
 	
-	@Test
+//	@Test
 	public void sqlIdPageTest(){
 		Map<String, String> map = new HashMap<String, String>();
 		map.put("name","xiandafu");
@@ -174,7 +175,7 @@ public class Demos {
 	}
 	
 	
-	@Test
+//	@Test
 	public void sqlIdSimplePageTest(){
 		User u = null;
 		Map<String, String> map = new HashMap<String, String>();
@@ -189,7 +190,7 @@ public class Demos {
 		log.info( "templateQueryTest" + p2);
 	}
 	
-	@Test
+//	@Test
 	public void queryNewUserest(){
 		Map<String, String> map = new HashMap<String, String>();
 		map.put("name","xiandafu%");
@@ -205,7 +206,7 @@ public class Demos {
 	
 	
 	
-	@Test
+//	@Test
 	public void sqlId1SimplePageTest(){
 		Map<String, String> map = new HashMap<String, String>();
 		map.put("name","xiandafu%");
@@ -219,7 +220,7 @@ public class Demos {
 		log.info( "templateQueryTest" + p2);
 	}
 	
-	@Test
+//	@Test
 	public void sqlId2SimplePageTest(){
 		Map<String, String> map = new HashMap<String, String>();
 		map.put("name","xiandafu%");
@@ -235,7 +236,7 @@ public class Demos {
 
 	
 	//-------------直接执行普通sql---------
-	@Test
+//	@Test
 	public void executeCommonSelect(){
 		List<User> list = sqlManager.execute(new SQLReady("select * from user where name=? and age > ?","xiandafu",0),User.class);
 		log.info(list.toString());
@@ -243,14 +244,14 @@ public class Demos {
 	
 
 	
-	@Test
+//	@Test
 	public void testLock(){
 		sqlManager.lock(User.class, 1);
 		log.info("lock execute");
 	}
 	
 
-	@Test
+//	@Test
 	public void testUserDao(){
 		
 		PageQuery<User> pq = new PageQuery<User>();
@@ -262,13 +263,13 @@ public class Demos {
 		pq1.toString();
 	}
 	
-	@Test
+//	@Test
 	public void queryHTest(){
 		log.info("queryHTest-------" );
 	}
 	
 	
-	@Test
+//	@Test
 	public void queryH2Test() {
 		Query<User> query = userDao.createQuery();
 		PageQuery pq = query.or(query.condition().andLike("name", "%t%")).andIn("id", Arrays.asList(1637, 1639, 1640))
@@ -278,14 +279,14 @@ public class Demos {
 	}
 	
 	
-	@Test
+//	@Test
 	public void queryOrmTest() {
 		Object o = userDao.single(1).get("roleid");
 //		log.info(o.toString());
 	}
 	
 	
-	@Test
+//	@Test
 	public void querybynamepercent() {
 		Map map = new HashMap();
 		map.put("name", "xiandafu");
@@ -294,7 +295,7 @@ public class Demos {
 	}
 	
 	
-	@Test
+//	@Test
 	public void queryIdIn() {
 		Object o = userDao.queryIdIn(new Integer[]{1,2,3});
 		log.info(o.toString());
@@ -305,13 +306,36 @@ public class Demos {
 //		sqlManager.insert(paras)
 //		log.info( "templateQueryTest" + p2);
 	}
-	@Test
+//	@Test
 	public void queryRole(){
 		List<Role> l = this.userDao.queryAllRole();
 		l.toString();
 	}
 
+//	@Test
+	public void query() {
+		Query<User> query = userDao.createQuery();
+		PageQuery pq = query.or(query.condition().andLike("name", "%t%")).andIn("id", Arrays.asList(1637, 1639, 1640))
+				.or(query.condition().andEq("id", 1640)).page(1, 1);
+		log.info("queryHTest-------" + pq.getList().size());
+	}
 	
+	
+	@Test
+	public void queryAnd() {
+		Query<User> query = userDao.createQuery();
+//		PageQuery pq = query.or(query.condition().andLike("name", "%t%")).andIn("id", Arrays.asList(1637, 1639, 1640))
+//				.or(query.condition().andEq("id", 1640)).page(1, 1);
+//		log.info("queryHTest-------" + pq.getList().size());
+		
+		 query.or(query.condition().andLike("name", "%t%")).andIn("id", Arrays.asList(1637, 1639, 1640))
+			.or(query.condition().andEq("id", 1640));
+		 query.and(query.condition().appendSql(" 1=2342 and exists9 a"));
+		 
+		query.page(1, 1);
+		log.info("querysql" + query.getSql().toString());
+		
+	}
 	
 
 	
@@ -329,6 +353,7 @@ public class Demos {
 	public void after(){
 		log.info("after");
 	}
+	
 	
 
 

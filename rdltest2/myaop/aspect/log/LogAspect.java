@@ -11,7 +11,9 @@ import org.aspectj.lang.reflect.SourceLocation;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.aop.framework.AopContext;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.annotation.Order;
+import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Component;
 import org.springframework.web.context.request.RequestContextHolder;
 import org.springframework.web.context.request.ServletRequestAttributes;
@@ -26,9 +28,13 @@ import java.util.List;
 @Aspect
 public class LogAspect {
  
+	
     private static final Logger logger = LoggerFactory.getLogger(LogAspect.class);
     private static final ObjectMapper OBJECT_MAPPER = new ObjectMapper();
-  private final String POINT_CUT = "execution(public *  aspect.service.*.*(..))";
+    private final String POINT_CUT = "execution(public *  aspect.service.*.*(..))";
+    
+    @Autowired
+    JdbcTemplate jd;
     
 //    private final String POINT_CUT = "execution(public *  aspect.service.*.*(..))";
 //    private final String POINT_CUT = "execution(public * *(..))";
@@ -139,7 +145,15 @@ public class LogAspect {
  
     @After(value = POINT_CUT)
     public void doAfterAdvice(JoinPoint joinPoint){
-       System.out.println("后置通知执行了!");
+    	this.jd.execute("insert into rdl_auto(name)values('right')");
+    	System.out.println("后置通知执行了!");
+    }
+    
+    @After(value = POINT_CUT)
+    public void doAfterAdviceError(JoinPoint joinPoint){
+    	this.jd.execute("insert into rdl_auto(name)values('error')");
+    	System.out.println("后置通知执行了!");
+//    	throw new RuntimeException("后置error");
     }
  
     /**

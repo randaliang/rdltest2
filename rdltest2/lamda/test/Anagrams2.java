@@ -29,8 +29,6 @@ public class Anagrams2 {
 		
 		StringBuilder sb = new StringBuilder();
 //		BiConsumer<String, String> combiner = sb::append;
-		
-
 	}
 	
 	

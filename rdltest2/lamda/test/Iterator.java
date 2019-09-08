@@ -7,25 +7,30 @@ import java.util.stream.StreamSupport;
 
 public class Iterator {
 
-	public static void main( String args[] ) {
-		Map<String,String> map = new HashMap<>();
-		for( String s : iterableOf(map.keySet().stream()) ) {
-			
+	public static void main(String args[]) {
+		Map<String, String> map = new HashMap<>();
+		String m ="";
+		for (String s : iterableOf(map.keySet().stream())) {
+
 		}
-		
-		for( String s : map.keySet().stream().iterator() ) {
-			
+
+		for (String s : m) {
+
 		}
-		
-	while(  map.keySet().stream().iterator().hasNext() ) {
-			
-	}
-		
+		for (String s : (Iterable<String>) map.keySet().stream().iterator()) {
+
+		}
+
+		while (map.keySet().stream().iterator().hasNext()) {
+
+		}
+
 	}
 	
 	public static<E> Iterable<E> iterableOf( Stream<E> stream ){
 //		return (Iterable<E>) stream.iterator();
 		return stream::iterator;
+		return  stream.iterator();
 		
 	}
 	

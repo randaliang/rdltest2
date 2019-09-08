@@ -32,7 +32,7 @@ import org.aspectj.lang.reflect.MethodSignature;
 import org.springframework.core.annotation.Order;
 import org.springframework.stereotype.Component;
 
-@Aspect
+//@Aspect
 @Component
 public class ServiceMonitor {
 
