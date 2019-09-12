@@ -3,6 +3,8 @@
  */
 package jetcache.samples.springboot;
 
+import java.util.Date;
+
 import org.springframework.stereotype.Repository;
 
 /**
@@ -13,16 +15,12 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public User getUserById(long userId) {
-    	try {
-			Thread.sleep(10000L);
-		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
         System.out.println("load user: " + userId);
         User user = new User();
         user.setUserId(userId);
         user.setUserName("user" + userId);
+        user.setDate(new Date());
+        user.setCreateDate(new Date() );
         return user;
     }
 
